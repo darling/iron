@@ -7,11 +7,7 @@ commands.set('register', {
 
 		const entry = commands.get(name);
 
-		entry &&
-			client.application?.commands.create(
-				entry.command,
-				'810987789847101491'
-			);
+		entry && client.application?.commands.create(entry.command);
 
 		interaction.reply('ACK');
 	},
@@ -20,7 +16,7 @@ commands.set('register', {
 		description: 'Developer only: Reregister commands within the bot',
 		options: [
 			{
-				name: 'name',
+				name: 'commandname',
 				type: 'STRING',
 				description: 'name of the command to repost',
 				required: true,

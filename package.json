@@ -34,6 +34,7 @@
 		"node": "^16.6.1"
 	},
 	"devDependencies": {
+		"@types/lodash": "^4.14.172",
 		"eslint": "^7.32.0"
 	}
 }

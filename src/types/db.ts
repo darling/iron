@@ -16,4 +16,15 @@ export enum IPermissionLevels {
 
 export interface IUser {
 	score?: number;
+	primary?: ICharacter;
+	secondary?: ICharacter;
+	summonCrystals?: number;
+	characters?: ICharacter[];
+}
+
+export interface ICharacter {
+	name: string;
+	health: number;
+	level: number;
+	class: 'TANK' | 'ADC' | 'MAGE';
 }
