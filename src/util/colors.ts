@@ -1,0 +1,26 @@
+export const COLORS = {
+	WHITE: 'FAFAFA',
+	GRAY: '18181B',
+	GREEN: {
+		LIGHT: 'DCFCE7',
+		REAL: '86EFAC',
+		PURE: '22C55E',
+		DARK: '14532D',
+	},
+	INDIGO: {
+		LIGHT: 'E0E7FF',
+		REAL: 'A5B4FC',
+		PURE: '6366F1',
+		DARK: '312E81',
+	},
+	RED: {
+		LIGHT: 'FFE4E6',
+		REAL: 'FDA4AF',
+		PURE: 'F43F5E',
+	},
+	YELLOW: {
+		LIGHT: 'FFEDD5',
+		REAL: 'FDBA74',
+		PURE: 'F97316',
+	},
+};

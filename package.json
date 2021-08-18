@@ -1,0 +1,39 @@
+{
+	"name": "iron",
+	"version": "1.0.0",
+	"description": "Ferris on Discord",
+	"engines": {
+		"node": ">=16.6.0"
+	},
+	"scripts": {
+		"dev": "tsc && node dist/app.js",
+		"start": "node dist/app.js",
+		"build": "tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/darling/iron.git"
+	},
+	"keywords": [],
+	"author": "Safe <s@ey.lc>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/darling/iron/issues"
+	},
+	"homepage": "https://github.com/darling/iron#readme",
+	"dependencies": {
+		"@discordjs/rest": "^0.1.0-canary.0",
+		"@typescript-eslint/eslint-plugin": "^4.29.2",
+		"@typescript-eslint/parser": "^4.29.2",
+		"discord-api-types": "^0.22.0",
+		"discord.js": "^13.1.0",
+		"dotenv": "^10.0.0",
+		"firebase-admin": "^9.11.0",
+		"fs": "^0.0.1-security",
+		"lodash": "^4.17.21",
+		"node": "^16.6.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0"
+	}
+}
