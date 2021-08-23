@@ -1,14 +1,31 @@
 import { MessageEmbed } from 'discord.js';
+import { sum, values } from 'lodash';
+import { addCharacterToUser } from '../database/user';
+
 import { commands } from '../discord';
+import { issueCharacter } from '../util/characters';
 import { COLORS } from '../util/colors';
 
 commands.set('mint', {
 	run: async (interaction) => {
 		const embed = new MessageEmbed();
 
-		embed.setColor(`#${COLORS.INDIGO.LIGHT}`);
-		embed.setDescription('Nothing to show here.');
-		embed.setTitle(`${interaction.user.username}'s Items`);
+		const character = issueCharacter(
+			interaction.options.getString('name') || undefined
+		);
+
+		embed.setColor(`#${COLORS.GREEN.LIGHT}`);
+		embed.setDescription(
+			`\`Total stats: ${sum(
+				values(character.stats)
+			)}\`\n\n\`\`\`json\n${JSON.stringify(character, null, 2)}\`\`\``
+		);
+		embed.setThumbnail(
+			`https://cdn.ferris.gg/img/food/${character.icon}.png`
+		);
+		embed.setTitle(`${interaction.user.username}'s New Character`);
+
+		addCharacterToUser(interaction.user.id, character);
 
 		interaction.reply({
 			embeds: [embed],
@@ -22,7 +39,7 @@ commands.set('mint', {
 				name: 'name',
 				description: 'The name of the Character',
 				type: 'STRING',
-				required: true,
+				required: false,
 			},
 		],
 	},

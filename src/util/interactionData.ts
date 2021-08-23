@@ -9,3 +9,12 @@ export const compressData = (interactionData: CommandInteractionOption[]) => {
 
 	return res;
 };
+
+export const longformStatLabels: { [key: string]: string } = {
+	str: 'Strength',
+	mag: 'Magic',
+	int: 'Intellect',
+	luc: 'Luck',
+	end: 'Endurance',
+	swi: 'Swiftness',
+};

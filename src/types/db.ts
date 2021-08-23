@@ -1,10 +1,18 @@
-import { ApplicationCommandData, CommandInteraction } from 'discord.js';
+import {
+	ApplicationCommandData,
+	ButtonInteraction,
+	CommandInteraction,
+} from 'discord.js';
 
 export interface ICommand {
 	run: (interaction: CommandInteraction) => any;
 	command: ApplicationCommandData;
 	needsProfile?: boolean;
 	permissionLevels?: IPermissionLevels[];
+}
+
+export interface IButton {
+	run: (interaction: ButtonInteraction) => any;
 }
 
 export enum IPermissionLevels {
@@ -23,8 +31,22 @@ export interface IUser {
 }
 
 export interface ICharacter {
+	hp: number;
 	name: string;
-	health: number;
-	level: number;
 	class: 'TANK' | 'ADC' | 'MAGE';
+	stats: {
+		str: number;
+		mag: number;
+		int: number;
+		luc: number;
+		end: number;
+		swi: number;
+	};
+	icon: string;
+	pairings?: string[];
+	bio: string;
+	code: string;
+	nickname?: string;
+	wins?: number;
+	battles?: number;
 }

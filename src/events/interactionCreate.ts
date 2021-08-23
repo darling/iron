@@ -1,25 +1,24 @@
-import { client, commands } from '../discord';
+import { buttons, client, commands } from '../discord';
 
 // Sort and categorize interactions that come in through gateway
 
 client.on('interactionCreate', async (interaction) => {
 	console.log(interaction);
 
-	switch (interaction.type) {
-		case 'APPLICATION_COMMAND': // Slash Commands and such
-			if (interaction.isCommand()) {
-				const command = commands.get(interaction.commandName);
+	if (interaction.isCommand()) {
+		const command = commands.get(interaction.commandName);
 
-				if (command) {
-					command.run(interaction);
-				}
-			}
-			break;
+		if (command) {
+			command.run(interaction);
+		}
+	}
 
-		case 'MESSAGE_COMPONENT': // Buttons/dropdowns
-			break;
+	if (interaction.isButton()) {
+		if (interaction.customId) {
+			const buttonIdentifier = interaction.customId.split(/ +/g)[0];
+			const button = buttons.get(buttonIdentifier);
 
-		case 'PING': // I think djs13 acks automagically
-			break;
+			button && button.run(interaction);
+		}
 	}
 });

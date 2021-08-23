@@ -1,0 +1,1080 @@
+{
+	"Banana": {
+		"name": "Banana",
+		"bio": "Peel the burn!",
+		"class": "TANK",
+		"icon": "001-banana",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Beer 2": {
+		"name": "Beer 2",
+		"bio": "I fear my last words will be ‘‘hold my beer and watch this.’’",
+		"class": "MAGE",
+		"icon": "001-beer-2",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Chocolate Bunny": {
+		"name": "Chocolate Bunny",
+		"bio": "Do I lay chocolate eggs?",
+		"class": "TANK",
+		"icon": "001-chocolate-bunny",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Orange": {
+		"name": "Orange",
+		"bio": "Orange you glad to see me?",
+		"class": "ADC",
+		"icon": "002-orange",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Punch 1": {
+		"name": "Punch 1",
+		"bio": "I like you a whole punch!",
+		"class": "ADC",
+		"icon": "002-punch-1",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Beers": {
+		"name": "Beers",
+		"bio": "Ale in a day's work.",
+		"class": "MAGE",
+		"icon": "003-beers",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Cookie 2": {
+		"name": "Cookie 2",
+		"bio": "That’s the way the cookie crumbles.",
+		"class": "ADC",
+		"icon": "003-cookie-2",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": ["Milk 1", "Milk"]
+	},
+	"Lemon": {
+		"name": "Lemon",
+		"bio": "I am simply the zest.",
+		"class": "ADC",
+		"icon": "003-lemon",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Cookie 1": {
+		"name": "Cookie 1",
+		"bio": "You’re a smart cookie.",
+		"class": "ADC",
+		"icon": "004-cookie-1",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": ["Milk 1", "Milk"]
+	},
+	"Tangerine": {
+		"name": "Tangerine",
+		"bio": "Singerine divided by cosgerine.",
+		"class": "ADC",
+		"icon": "004-tangerine",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Tomato Juice": {
+		"name": "Tomato Juice",
+		"bio": "If you like vodka and tomato juice so much... then why don’t you bloody mary it!",
+		"class": "MAGE",
+		"icon": "004-tomato-juice",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Gingerbread": {
+		"name": "Gingerbread",
+		"bio": "Gluten Tag",
+		"class": "TANK",
+		"icon": "005-gingerbread",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Ice Tea": {
+		"name": "Ice Tea",
+		"bio": "Feeling f-ice-tea!",
+		"class": "ADC",
+		"icon": "005-ice-tea",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Pumpkin": {
+		"name": "Pumpkin",
+		"bio": "Go big or gourd home.",
+		"class": "TANK",
+		"icon": "005-pumpkin",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Chocolate Egg": {
+		"name": "Chocolate Egg",
+		"bio": "Where's the rabbit",
+		"class": "TANK",
+		"icon": "006-chocolate-egg",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Cucumber": {
+		"name": "Cucumber",
+		"bio": "I'm in a pickle",
+		"class": "TANK",
+		"icon": "006-cucumber",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Lemonade": {
+		"name": "Lemonade",
+		"bio": "I'll Schweppe you off your feet!",
+		"class": "ADC",
+		"icon": "006-lemonade",
+		"stats": { "str": 0, "mag": 7, "int": 5, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Apple": {
+		"name": "Apple",
+		"bio": "Hardcore.",
+		"class": "MAGE",
+		"icon": "007-apple",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Punch": {
+		"name": "Punch",
+		"bio": "I'm not a knuckle-sandwich.",
+		"class": "MAGE",
+		"icon": "007-punch",
+		"stats": { "str": 0, "mag": 7, "int": 5, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Ring Pop": {
+		"name": "Ring Pop",
+		"bio": "You make my heart pop!",
+		"class": "ADC",
+		"icon": "007-ring-pop",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Lollipop 2": {
+		"name": "Lollipop 2",
+		"bio": "I'm a sucker for you!",
+		"class": "ADC",
+		"icon": "008-lollipop-2",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Pear": {
+		"name": "Pear",
+		"bio": "We make a nice pear.",
+		"class": "TANK",
+		"icon": "008-pear",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Soda 2": {
+		"name": "Soda 2",
+		"bio": "Let's get fizzical!",
+		"class": "ADC",
+		"icon": "008-soda-2",
+		"stats": { "str": 0, "mag": 7, "int": 5, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Broccoli": {
+		"name": "Broccoli",
+		"bio": "You're a broc-star!",
+		"class": "TANK",
+		"icon": "009-broccoli",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Coffee Cup": {
+		"name": "Coffee Cup",
+		"bio": "We're the perfect blend.",
+		"class": "MAGE",
+		"icon": "009-coffee-cup",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Gummy 5": {
+		"name": "Gummy 5",
+		"bio": "I'm hooked onto you.",
+		"class": "ADC",
+		"icon": "009-gummy-5",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Cabbage": {
+		"name": "Cabbage",
+		"bio": "I've got some emotional cabbage.",
+		"class": "TANK",
+		"icon": "010-cabbage",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Chocolate": {
+		"name": "Chocolate",
+		"bio": "I'm feeling bitter today.",
+		"class": "MAGE",
+		"icon": "033-chocolate",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": ["Marshmallow", "Marshmallow 1"]
+	},
+	"Mint 1": {
+		"name": "Mint 1",
+		"bio": "I think you just need some encourage-mint.",
+		"class": "MAGE",
+		"icon": "010-mint-1",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Asparagus": {
+		"name": "Asparagus",
+		"bio": "I'm here to kick some as-paragus.",
+		"class": "TANK",
+		"icon": "011-asparagus",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Barrel": {
+		"name": "Barrel",
+		"bio": "I can barrel-y hold my excitement!",
+		"class": "MAGE",
+		"icon": "011-barrel",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Chocolate 2": {
+		"name": "Chocolate 2",
+		"bio": "You make me melt.",
+		"class": "MAGE",
+		"icon": "011-chocolate-2",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": ["Marshmallow", "Marshmallow 1"]
+	},
+	"Bok Choy": {
+		"name": "Bok Choy",
+		"bio": "Choy to the world!",
+		"class": "ADC",
+		"icon": "012-bok-choy",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Cocktail 2": {
+		"name": "Cocktail 2",
+		"bio": "I like it dirty...",
+		"class": "MAGE",
+		"icon": "012-cocktail-2",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Crepe": {
+		"name": "Crepe",
+		"bio": "Crepe-er aww man.",
+		"class": "MAGE",
+		"icon": "012-crepe",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Caramelized Apple": {
+		"name": "Caramelized Apple",
+		"bio": "Caramel apple of my eye.",
+		"class": "ADC",
+		"icon": "013-caramelized-apple",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Leek": {
+		"name": "Leek",
+		"bio": "There's a leek.",
+		"class": "TANK",
+		"icon": "013-leek",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Water 1": {
+		"name": "Water 1",
+		"bio": "Moisturized.",
+		"class": "MAGE",
+		"icon": "013-water-1",
+		"stats": {
+			"str": 0,
+			"mag": 7,
+			"int": 0,
+			"luc": 0,
+			"end": 10,
+			"swi": 10
+		},
+		"pairings": []
+	},
+	"Jelly": {
+		"name": "Jelly",
+		"bio": "I'll put my enemies in a jam!",
+		"class": "TANK",
+		"icon": "014-jelly",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Milk 1": {
+		"name": "Milk 1",
+		"bio": "Let's not cry over spilt milk...",
+		"class": "TANK",
+		"icon": "014-milk-1",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": ["Cookie 2", "Cookie 1", "Cookie"]
+	},
+	"Pineapple": {
+		"name": "Pineapple",
+		"bio": "I'm a fine-apple.",
+		"class": "ADC",
+		"icon": "014-pineapple",
+		"stats": { "str": 5, "mag": 5, "int": 8, "luc": 0, "end": 5, "swi": 5 },
+		"pairings": []
+	},
+	"Lollipop 1": {
+		"name": "Lollipop 1",
+		"bio": "Pop! Skip. Jump!",
+		"class": "MAGE",
+		"icon": "015-lollipop-1",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Mushroom": {
+		"name": "Mushroom",
+		"bio": "Make some shroom!",
+		"class": "TANK",
+		"icon": "015-mushroom",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Wine 1": {
+		"name": "Wine 1",
+		"bio": "I'm only Debbie's third bottle!",
+		"class": "MAGE",
+		"icon": "015-wine-1",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Cherries": {
+		"name": "Cherries",
+		"bio": "We're cherrific!",
+		"class": "ADC",
+		"icon": "016-cherries",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Coconut": {
+		"name": "Coconut",
+		"bio": "I'm hollow inside.",
+		"class": "TANK",
+		"icon": "046-coconut",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Peanut Butter": {
+		"name": "Peanut Butter",
+		"bio": "Much better than that Nutella guy!",
+		"class": "TANK",
+		"icon": "016-peanut-butter",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Berries": {
+		"name": "Berries",
+		"bio": "I like you berry much!",
+		"class": "MAGE",
+		"icon": "017-berries",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Cherry": {
+		"name": "Cherry",
+		"bio": "I'm cherrific!",
+		"class": "ADC",
+		"icon": "017-cherry",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Soda 1": {
+		"name": "Soda 1",
+		"bio": "All my homies hate enamel.",
+		"class": "ADC",
+		"icon": "017-soda-1",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Strawberry": {
+		"name": "Strawberry",
+		"bio": "Put your hands up! This is a st-robbery!",
+		"class": "MAGE",
+		"icon": "018-strawberry",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Sweet Potato": {
+		"name": "Sweet Potato",
+		"bio": "Potato's mild-mannered brother.",
+		"class": "TANK",
+		"icon": "045-sweet-potato",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Vodka": {
+		"name": "Vodka",
+		"bio": "Святой Дух.",
+		"class": "MAGE",
+		"icon": "018-vodka",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Cocktail 1": {
+		"name": "Cocktail 1",
+		"bio": "Born to rum",
+		"class": "MAGE",
+		"icon": "019-cocktail-1",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Jam": {
+		"name": "Jam",
+		"bio": "I'm ready to jam",
+		"class": "TANK",
+		"icon": "019-jam",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Pomegranate": {
+		"name": "Pomegranate",
+		"bio": "Don't take me for pome-granted.",
+		"class": "TANK",
+		"icon": "019-pomegranate",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Juice 1": {
+		"name": "Juice 1",
+		"bio": "Everything's going to be O J.",
+		"class": "ADC",
+		"icon": "020-juice-1",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Lychee": {
+		"name": "Lychee",
+		"bio": "I'll never lychee go.",
+		"class": "ADC",
+		"icon": "020-lychee",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Pancakes": {
+		"name": "Pancakes",
+		"bio": "I'll flatten you like a pancake!",
+		"class": "TANK",
+		"icon": "020-pancakes",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Banana Split": {
+		"name": "Banana Split",
+		"bio": "Ready to split some skulls!",
+		"class": "ADC",
+		"icon": "021-banana-split",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": []
+	},
+	"Passion Fruit": {
+		"name": "Passion Fruit",
+		"bio": "Drake.",
+		"class": "TANK",
+		"icon": "021-passion-fruit",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Whisky": {
+		"name": "Whisky",
+		"bio": "I think you're neat",
+		"class": "MAGE",
+		"icon": "021-whisky",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Churro": {
+		"name": "Churro",
+		"bio": "Churro all I need!",
+		"class": "ADC",
+		"icon": "022-churro",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Frappe": {
+		"name": "Frappe",
+		"bio": "I'd frappe that",
+		"class": "MAGE",
+		"icon": "022-frappe",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Tomato": {
+		"name": "Tomato",
+		"bio": "Tomato tomato. who cares!",
+		"class": "MAGE",
+		"icon": "022-tomato",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Meringue": {
+		"name": "Meringue",
+		"bio": "When life gives you lemons: make meringue",
+		"class": "MAGE",
+		"icon": "023-meringue",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": []
+	},
+	"Sangria": {
+		"name": "Sangria",
+		"bio": "I'm like wine but better",
+		"class": "MAGE",
+		"icon": "023-sangria",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Watermelon": {
+		"name": "Watermelon",
+		"bio": "I'm one in a melon",
+		"class": "TANK",
+		"icon": "023-watermelon",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Avocado": {
+		"name": "Avocado",
+		"bio": "Holy guacamole!",
+		"class": "TANK",
+		"icon": "024-avocado",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Beer 1": {
+		"name": "Beer 1",
+		"bio": "Don’t worry. Be hoppy.",
+		"class": "ADC",
+		"icon": "024-beer-1",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Candy Cane": {
+		"name": "Candy Cane",
+		"bio": "I cane do it!",
+		"class": "TANK",
+		"icon": "024-candy-cane",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Cocktail": {
+		"name": "Cocktail",
+		"bio": "I like you-alada",
+		"class": "MAGE",
+		"icon": "025-cocktail",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Corn": {
+		"name": "Corn",
+		"bio": "The kernel of the vegetable forces.",
+		"class": "TANK",
+		"icon": "025-corn",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Gummy 4": {
+		"name": "Gummy 4",
+		"bio": "Where's my friends?",
+		"class": "ADC",
+		"icon": "025-gummy-4",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Champagne": {
+		"name": "Champagne",
+		"bio": "Bubbling with fun!",
+		"class": "MAGE",
+		"icon": "026-champagne",
+		"stats": { "str": 0, "mag": 4, "int": 7, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Gummy 3": {
+		"name": "Gummy 3",
+		"bio": "Gummy gummy in my tummy tummy!",
+		"class": "ADC",
+		"icon": "026-gummy-3",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Kiwi": {
+		"name": "Kiwi",
+		"bio": "Feeling cute.",
+		"class": "ADC",
+		"icon": "026-kiwi",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Apricot": {
+		"name": "Apricot",
+		"bio": "I'll aprishoot my enemies",
+		"class": "ADC",
+		"icon": "027-apricot",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Frappuccino 1": {
+		"name": "Frappuccino 1",
+		"bio": "I don't give a frappe.",
+		"class": "ADC",
+		"icon": "027-frappuccino-1",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Macaron": {
+		"name": "Macaron",
+		"bio": "Let's get it macarON!",
+		"class": "MAGE",
+		"icon": "027-macaron",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Beet": {
+		"name": "Beet",
+		"bio": "This vegetable can take a beeting!",
+		"class": "TANK",
+		"icon": "028-beet",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Juice": {
+		"name": "Juice",
+		"bio": "The juice is loose!",
+		"class": "ADC",
+		"icon": "028-juice",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Sugar": {
+		"name": "Sugar",
+		"bio": "The sugar cube took etiquette classes—now he’s refined.",
+		"class": "ADC",
+		"icon": "028-sugar",
+		"stats": { "str": 5, "mag": 8, "int": 7, "luc": 0, "end": 8, "swi": 5 },
+		"pairings": []
+	},
+	"Pepper": {
+		"name": "Pepper",
+		"bio": "I'm down to Netflix and chili.",
+		"class": "MAGE",
+		"icon": "034-pepper",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Pudding": {
+		"name": "Pudding",
+		"bio": "This snack packs a punch!",
+		"class": "TANK",
+		"icon": "029-pudding",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": []
+	},
+	"Wine": {
+		"name": "Wine",
+		"bio": "I'm a mer-lot of fun!",
+		"class": "MAGE",
+		"icon": "029-wine",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Beer": {
+		"name": "Beer",
+		"bio": "Life and beer are very similar. Chill for best results.",
+		"class": "MAGE",
+		"icon": "030-beer",
+		"stats": { "str": 0, "mag": 8, "int": 3, "luc": 0, "end": 8, "swi": 8 },
+		"pairings": []
+	},
+	"Chocolate 1": {
+		"name": "Chocolate 1",
+		"bio": "CHOCOLATE? CHOCOLATE!",
+		"class": "MAGE",
+		"icon": "030-chocolate-1",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": ["Marshmallow", "Marshmallow 1"]
+	},
+	"Raspberry": {
+		"name": "Raspberry",
+		"bio": "Don't tell anyone this: I'm not even a real berry.",
+		"class": "ADC",
+		"icon": "030-raspberry",
+		"stats": { "str": 7, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 3 },
+		"pairings": []
+	},
+	"Peas": {
+		"name": "Peas",
+		"bio": "I'm peas-ed to meet you!",
+		"class": "MAGE",
+		"icon": "031-peas",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Pie": {
+		"name": "Pie",
+		"bio": "Divide the circumference by diameter.",
+		"class": "TANK",
+		"icon": "031-pie",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Tea Cup": {
+		"name": "Tea Cup",
+		"bio": "I'm a quali-tea option!",
+		"class": "MAGE",
+		"icon": "031-tea-cup",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Donut": {
+		"name": "Donut",
+		"bio": "Donut fool me for a weakling.",
+		"class": "ADC",
+		"icon": "032-donut",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Frappuccino": {
+		"name": "Frappuccino",
+		"bio": "Be frappy.",
+		"class": "ADC",
+		"icon": "032-frappuccino",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Radish": {
+		"name": "Radish",
+		"bio": "I look radishing today.",
+		"class": "TANK",
+		"icon": "032-radish",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Grapes": {
+		"name": "Grapes",
+		"bio": "We're a bunch of fun!",
+		"class": "MAGE",
+		"icon": "033-grapes",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Orange Juice": {
+		"name": "Orange Juice",
+		"bio": "Mint's mortal enemy.",
+		"class": "ADC",
+		"icon": "033-orange-juice",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Cupcake": {
+		"name": "Cupcake",
+		"bio": "You bake me crazy.",
+		"class": "ADC",
+		"icon": "034-cupcake",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Milkshake": {
+		"name": "Milkshake",
+		"bio": "There are surprisingly no boys in the yard.",
+		"class": "TANK",
+		"icon": "040-milkshake",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Guava": {
+		"name": "Guava",
+		"bio": "I'd guava be a smoothie.",
+		"class": "TANK",
+		"icon": "035-guava",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Gummy 2": {
+		"name": "Gummy 2",
+		"bio": "Help me find my bretheren!",
+		"class": "ADC",
+		"icon": "035-gummy-2",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Teapot": {
+		"name": "Teapot",
+		"bio": "The tea cup is such a cute tea.",
+		"class": "TANK",
+		"icon": "035-teapot",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Carrot": {
+		"name": "Carrot",
+		"bio": "I don't carrot all.",
+		"class": "TANK",
+		"icon": "036-carrot",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Cotton Candy": {
+		"name": "Cotton Candy",
+		"bio": "On cloud nine.",
+		"class": "MAGE",
+		"icon": "036-cotton-candy",
+		"stats": { "str": 2, "mag": 7, "int": 2, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Soda": {
+		"name": "Soda",
+		"bio": "I'm a soft drink",
+		"class": "ADC",
+		"icon": "036-soda",
+		"stats": { "str": 0, "mag": 5, "int": 7, "luc": 0, "end": 7, "swi": 8 },
+		"pairings": []
+	},
+	"Candy 1": {
+		"name": "Candy 1",
+		"bio": "Sweet dreams!",
+		"class": "ADC",
+		"icon": "037-candy-1",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Cappuccino": {
+		"name": "Cappuccino",
+		"bio": "I'm brew-tiful!",
+		"class": "MAGE",
+		"icon": "037-cappuccino",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Pitaya": {
+		"name": "Pitaya",
+		"bio": "May our love drag-on and on and on...",
+		"class": "MAGE",
+		"icon": "037-pitaya",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Arugula": {
+		"name": "Arugula",
+		"bio": "A regular salad ingredient.",
+		"class": "TANK",
+		"icon": "038-arugula",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Cookie": {
+		"name": "Cookie",
+		"bio": "Why did the cookie go to the doctor? He was feeling crummy.",
+		"class": "ADC",
+		"icon": "038-cookie",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Milk": {
+		"name": "Milk",
+		"bio": "I'm legendairy.",
+		"class": "MAGE",
+		"icon": "038-milk",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": ["Cookie 2", "Cookie 1", "Cookie"]
+	},
+	"Aubergine": {
+		"name": "Aubergine",
+		"bio": ";)",
+		"class": "TANK",
+		"icon": "039-aubergine",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Water": {
+		"name": "Water",
+		"bio": "Going with the flow...",
+		"class": "MAGE",
+		"icon": "039-water",
+		"stats": {
+			"str": 0,
+			"mag": 7,
+			"int": 0,
+			"luc": 0,
+			"end": 10,
+			"swi": 10
+		},
+		"pairings": []
+	},
+	"Coffee": {
+		"name": "Coffee",
+		"bio": "A bitter adversary to those who cross them.",
+		"class": "MAGE",
+		"icon": "040-coffee",
+		"stats": { "str": 0, "mag": 7, "int": 7, "luc": 0, "end": 5, "swi": 8 },
+		"pairings": []
+	},
+	"Olives": {
+		"name": "Olives",
+		"bio": "Olive my job!",
+		"class": "ADC",
+		"icon": "040-olives",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Jelly Beans": {
+		"name": "Jelly Beans",
+		"bio": "You just got bean-boozled!",
+		"class": "ADC",
+		"icon": "041-jelly-beans",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Papaya": {
+		"name": "Papaya",
+		"bio": "Papayeah!",
+		"class": "TANK",
+		"icon": "041-papaya",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Ginger": {
+		"name": "Ginger",
+		"bio": "I have no soul.",
+		"class": "TANK",
+		"icon": "042-ginger",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Marshmallow 1": {
+		"name": "Marshmallow 1",
+		"bio": "True to their name: mellow.",
+		"class": "ADC",
+		"icon": "042-marshmallow-1",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": ["Chocolate", "Chocolate 2", "Chocolate 1", "Chocolate"]
+	},
+	"Mangosteen": {
+		"name": "Mangosteen",
+		"bio": "Have you mango-seen my moves?",
+		"class": "TANK",
+		"icon": "043-mangosteen",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Marshmallow": {
+		"name": "Marshmallow",
+		"bio": "Contrary to their name: harsh.",
+		"class": "ADC",
+		"icon": "043-marshmallow",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": ["Chocolate", "Chocolate 2", "Chocolate 1", "Chocolate"]
+	},
+	"Gummy 1": {
+		"name": "Gummy 1",
+		"bio": "Gummy a hug",
+		"class": "ADC",
+		"icon": "044-gummy-1",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Potato": {
+		"name": "Potato",
+		"bio": "The starch of the competition!",
+		"class": "TANK",
+		"icon": "044-potato",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Candy": {
+		"name": "Candy",
+		"bio": "This'll be sweet!",
+		"class": "ADC",
+		"icon": "045-candy",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	},
+	"Cake": {
+		"name": "Cake",
+		"bio": "You want a piece of me?!",
+		"class": "TANK",
+		"icon": "046-cake",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Ice Cream": {
+		"name": "Ice Cream",
+		"bio": "Ice to meet you!",
+		"class": "ADC",
+		"icon": "047-ice-cream",
+		"stats": { "str": 2, "mag": 7, "int": 5, "luc": 0, "end": 3, "swi": 8 },
+		"pairings": []
+	},
+	"Mango": {
+		"name": "Mango",
+		"bio": "Let this man-go!",
+		"class": "TANK",
+		"icon": "047-mango",
+		"stats": { "str": 5, "mag": 6, "int": 6, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Garlic": {
+		"name": "Garlic",
+		"bio": "I wear the best cloves!",
+		"class": "TANK",
+		"icon": "048-garlic",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Gummy": {
+		"name": "Gummy",
+		"bio": "Please just leave me alone.",
+		"class": "ADC",
+		"icon": "048-gummy",
+		"stats": { "str": 4, "mag": 4, "int": 4, "luc": 0, "end": 4, "swi": 4 },
+		"pairings": []
+	},
+	"Mint": {
+		"name": "Mint",
+		"bio": "The type to mint-ce words.",
+		"class": "MAGE",
+		"icon": "049-mint",
+		"stats": { "str": 3, "mag": 7, "int": 7, "luc": 0, "end": 3, "swi": 5 },
+		"pairings": []
+	},
+	"Onion": {
+		"name": "Onion",
+		"bio": "Making kids cry since the dawn of time.",
+		"class": "TANK",
+		"icon": "049-onion",
+		"stats": { "str": 7, "mag": 3, "int": 0, "luc": 0, "end": 7, "swi": 7 },
+		"pairings": []
+	},
+	"Lettuce": {
+		"name": "Lettuce",
+		"bio": "Lettuce do this!",
+		"class": "TANK",
+		"icon": "050-lettuce",
+		"stats": { "str": 7, "mag": 3, "int": 3, "luc": 0, "end": 5, "swi": 3 },
+		"pairings": []
+	},
+	"Lollipop": {
+		"name": "Lollipop",
+		"bio": "Only knows how to sucker-punch.",
+		"class": "ADC",
+		"icon": "050-lollipop",
+		"stats": { "str": 7, "mag": 3, "int": 7, "luc": 0, "end": 8, "swi": 3 },
+		"pairings": []
+	}
+}

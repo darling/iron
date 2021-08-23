@@ -7,7 +7,11 @@ commands.set('register', {
 
 		const entry = commands.get(name);
 
-		entry && client.application?.commands.create(entry.command);
+		entry &&
+			client.application?.commands.create(
+				entry.command,
+				'810987789847101491'
+			);
 
 		interaction.reply('ACK');
 	},
