@@ -1,5 +1,5 @@
 import { firestore } from 'firebase-admin';
-import { ICharacter, IUser } from '../types/db';
+import { ICharacter, ITeam, IUser } from '../types/db';
 import { getRandCharacter } from '../util/characters';
 import { firebaseAdmin } from '../util/firebase';
 
@@ -96,4 +96,8 @@ export const setPrimaryCharacter = async (
 			characters: firestore.FieldValue.arrayUnion(data?.primary) as any,
 		});
 	}
+};
+
+export const setUserTeam = async (uid: string, team: ITeam) => {
+	await updateUser(uid, { primary: team.first, secondary: team.second });
 };

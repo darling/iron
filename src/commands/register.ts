@@ -5,15 +5,25 @@ commands.set('register', {
 		const name = interaction.options.getString('name', true);
 		if (!name) return;
 
+		if (interaction.user.id !== '141075183271280641') {
+			await interaction.reply("You're not @safe");
+			return;
+		}
+
 		const entry = commands.get(name);
 
-		entry &&
-			client.application?.commands.create(
-				entry.command,
-				'810987789847101491'
-			);
+		if (entry) {
+			if (interaction.guildId) {
+				client.application?.commands.create(
+					entry.command,
+					interaction.guildId
+				);
+			} else {
+				client.application?.commands.create(entry.command);
+			}
+		}
 
-		interaction.reply('ACK');
+		await interaction.reply('ACK');
 	},
 	command: {
 		name: 'register',

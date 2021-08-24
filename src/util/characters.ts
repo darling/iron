@@ -52,6 +52,8 @@ export const issueCharacter = (name?: string): ICharacter => {
 		base.hp = clamp(base.hp, 70, Number.MAX_SAFE_INTEGER);
 	}
 
+	base.startHp = base.hp;
+
 	return base;
 };
 

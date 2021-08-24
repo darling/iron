@@ -1,7 +1,7 @@
 import { createCanvas, loadImage } from 'canvas';
 import { chunk, keys, map, padStart, upperCase } from 'lodash';
 
-import { ICharacter } from '../types/db';
+import { ICharacter, ITeam } from '../types/db';
 import { COLORS } from './colors';
 import { longformStatLabels } from './interactionData';
 
@@ -20,7 +20,7 @@ export const genCharProfile = async (char: ICharacter) => {
 
 	// Bg
 
-	context.fillStyle = `#${COLORS.GRAY}`;
+	context.fillStyle = `#${COLORS.GRAY.DARK}`;
 	context.fillRect(0, 0, w, h);
 
 	// Title
@@ -204,7 +204,7 @@ export const deletedChar = async (char: ICharacter) => {
 
 	// Bg
 
-	context.fillStyle = `#${COLORS.GRAY}`;
+	context.fillStyle = `#${COLORS.GRAY.DARK}`;
 	context.fillRect(0, 0, w, h);
 
 	// Title
@@ -229,6 +229,150 @@ export const deletedChar = async (char: ICharacter) => {
 		'Has been eaten.',
 		padding,
 		titleSize + padding + 25 + titleSize / 3
+	);
+
+	return canvas.toBuffer('image/png');
+};
+
+export const generateTeamView = async (team: ITeam) => {
+	const w = 600;
+	const h = 400;
+
+	const padding = 25;
+
+	const canvas = createCanvas(w, h);
+	const context = canvas.getContext('2d');
+
+	context.antialias = 'subpixel';
+
+	// Bg
+
+	context.fillStyle = `#${COLORS.GRAY.DARK}`;
+	context.fillRect(0, 0, w, h);
+
+	// Title info
+
+	const titleSize = 30;
+
+	// image information
+
+	const imageDimensions = 110;
+	const imageHeight = padding + titleSize + 60;
+	const imageCenter = w / 2;
+
+	// circle information
+
+	const r = imageDimensions / 2 + 30;
+	const innerR = r + 5;
+	const circleY = imageHeight + imageDimensions / 2;
+
+	const firstX = imageCenter - w / 4;
+	const secondX = imageCenter + w / 4;
+
+	// FIRST BG GREEN
+	context.beginPath();
+	context.arc(firstX, circleY, r, 0, 2 * Math.PI);
+	context.fillStyle = `#${COLORS.GRAY.MED}`;
+	context.fill();
+	context.closePath();
+
+	// FIRST LIGHT GREEN
+	context.beginPath();
+	context.moveTo(firstX, circleY);
+	context.arc(
+		firstX,
+		circleY,
+		innerR,
+		0,
+		2 * Math.PI * (team.first.hp / team.first.startHp)
+	);
+	const firstHealthColorCode =
+		team.first.hp > team.first.startHp / 2
+			? COLORS.GREEN.PURE
+			: team.first.hp > team.first.startHp / 4
+			? COLORS.YELLOW.PURE
+			: COLORS.RED.PURE;
+	context.fillStyle = `#${firstHealthColorCode}`;
+	context.fill();
+	context.closePath();
+
+	// FIRST GRAY INSIDE
+	context.beginPath();
+	context.arc(firstX, circleY, r - 10, 0, 2 * Math.PI);
+	context.fillStyle = `#${COLORS.GRAY.DARK}`;
+	context.fill();
+	context.closePath();
+
+	context.beginPath();
+	context.arc(secondX, circleY, r, 0, 2 * Math.PI);
+	context.fillStyle = `#${COLORS.GRAY.MED}`;
+	context.fill();
+	context.closePath();
+
+	context.beginPath();
+	context.moveTo(secondX, circleY);
+	context.arc(
+		secondX,
+		circleY,
+		innerR,
+		0,
+		2 * Math.PI * (team.second.hp / team.second.startHp)
+	);
+	const secondHealthColorCode =
+		team.second.hp > team.second.startHp / 2
+			? COLORS.GREEN.PURE
+			: team.second.hp > team.second.startHp / 4
+			? COLORS.YELLOW.PURE
+			: COLORS.RED.PURE;
+	context.fillStyle = `#${secondHealthColorCode}`;
+	context.fill();
+	context.closePath();
+
+	context.beginPath();
+	context.arc(secondX, circleY, r - 10, 0, 2 * Math.PI);
+	context.fillStyle = `#${COLORS.GRAY.DARK}`;
+	context.fill();
+	context.closePath();
+
+	// first image
+
+	const firstImage = await loadImage(
+		`https://cdn.ferris.gg/img/food/${team.first.icon}.png`
+	);
+
+	context.drawImage(
+		firstImage,
+		imageCenter - w / 4 - imageDimensions / 2,
+		imageHeight,
+		imageDimensions,
+		imageDimensions
+	);
+
+	// second image
+
+	const secondImage = await loadImage(
+		`https://cdn.ferris.gg/img/food/${team.second.icon}.png`
+	);
+
+	context.drawImage(
+		secondImage,
+		imageCenter + w / 4 - imageDimensions / 2,
+		imageHeight,
+		imageDimensions,
+		imageDimensions
+	);
+
+	// Title
+
+	context.font = `${titleSize}px Josefin Sans Medium`;
+	context.textAlign = 'center';
+	context.textBaseline = 'bottom';
+	context.fillStyle = `#${COLORS.WHITE}`;
+
+	context.fillText(
+		`${team.first.name} & ${team.second.name}`,
+		w / 2,
+		titleSize + padding
 	);
 
 	return canvas.toBuffer('image/png');

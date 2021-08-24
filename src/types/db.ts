@@ -19,19 +19,26 @@ export enum IPermissionLevels {
 	DEVELOPER,
 	ADMIN,
 	MODERATOR,
-	PLAYER,
 }
 
 export interface IUser {
-	score?: number;
+	premium?: boolean;
+	perm?: IPermissionLevels[];
+	currency?: number;
 	primary?: ICharacter;
 	secondary?: ICharacter;
 	summonCrystals?: number;
 	characters?: ICharacter[];
 }
 
+export interface ITeam {
+	first: ICharacter;
+	second: ICharacter;
+}
+
 export interface ICharacter {
 	hp: number;
+	startHp: number;
 	name: string;
 	class: 'TANK' | 'ADC' | 'MAGE';
 	stats: {
