@@ -21,6 +21,11 @@ export enum IPermissionLevels {
 	MODERATOR,
 }
 
+export interface IGuild {
+	registered?: boolean;
+	adminCanEditPerms?: boolean;
+}
+
 export interface IUser {
 	premium?: boolean;
 	perm?: IPermissionLevels[];
@@ -36,22 +41,37 @@ export interface ITeam {
 	second: ICharacter;
 }
 
-export interface ICharacter {
-	hp: number;
-	startHp: number;
+export interface IPreMintCharacter {
+	id: number;
 	name: string;
 	class: 'TANK' | 'ADC' | 'MAGE';
 	stats: {
-		str: number;
-		mag: number;
-		int: number;
-		luc: number;
-		end: number;
-		swi: number;
+		id: number;
+		name: string;
+		strength: number;
+		magic: number;
+		intellect: number;
+		endurance: number;
+		swiftness: number;
 	};
+	categories?: { id: number; name: string }[];
 	icon: string;
-	pairings?: string[];
 	bio: string;
+}
+
+export interface ICharacter extends IPreMintCharacter {
+	hp: number;
+	startHp: number;
+	stats: {
+		id: number;
+		name: string;
+		strength: number;
+		magic: number;
+		intellect: number;
+		luck: number;
+		endurance: number;
+		swiftness: number;
+	};
 	code: string;
 	nickname?: string;
 	wins?: number;

@@ -8,16 +8,16 @@ const minZero = (number: number): number => {
 
 export const calcSingleDamage = (char: ICharacter): number => {
 	const rand = random(0, 100);
-	const procLuck = rand < char.stats.luc;
+	const procLuck = rand < char.stats.luck;
 
-	return char.stats.str * (procLuck ? 2 : 1);
+	return char.stats.strength * (procLuck ? 2 : 1);
 };
 
 export const calcTeamDamage = (team: ITeam): number => {
 	const rand = random(0, 50);
 	let dmg = calcSingleDamage(team.first);
 
-	const intLuck = rand < team.second.stats.int;
+	const intLuck = rand < team.second.stats.intellect;
 
 	return ceil(dmg * (intLuck ? 1.5 : 1));
 };
@@ -41,7 +41,7 @@ export const calcWinner = (
 			// Player
 			const dmg = calcTeamDamage(team);
 			const turnEffectDmg = minZero(
-				clamp(dmg, 10, Number.MAX_SAFE_INTEGER) - enemyChar.stats.mag
+				clamp(dmg, 10, Number.MAX_SAFE_INTEGER) - enemyChar.stats.magic
 			);
 
 			enemyChar.hp = clamp(
@@ -57,7 +57,7 @@ export const calcWinner = (
 			);
 			// Enemy (presumably single)
 
-			let turnEffectDmg = minZero(dmg - team.second.stats.mag);
+			let turnEffectDmg = minZero(dmg - team.second.stats.magic);
 
 			if (team.second.class === 'TANK') {
 				turnEffectDmg *= 0.5;
@@ -87,9 +87,12 @@ export const calcWinner = (
 
 		losthp = Math.abs(losthp);
 
-		team.first.hp = minZero(team.first.hp - losthp + team.first.stats.mag);
+		team.first.hp = minZero(
+			team.first.hp - losthp + team.first.stats.magic
+		);
+
 		team.second.hp = minZero(
-			team.second.hp - losthp + team.second.stats.mag
+			team.second.hp - losthp + team.second.stats.magic
 		);
 
 		if (team.first.hp <= 0 || team.second.hp <= 0) {
