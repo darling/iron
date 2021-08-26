@@ -48,7 +48,6 @@ const mintCharacter = (preMint: IPreMintCharacter): ICharacter => {
 	return outItem;
 };
 
-// THIS DOES NOT RETURN A REAL FULL CHARACTER
 export const getRandCharacter = (): ICharacter => {
 	// Dunno if this works
 
@@ -59,7 +58,6 @@ export const getRandCharacter = (): ICharacter => {
 	return outItem;
 };
 
-// THIS DOES NOT RETURN A REAL FULL CHARACTER
 export const getCharacter = (name: string): ICharacter => {
 	let chosenCharacter = get(charData, name) as IPreMintCharacter;
 
