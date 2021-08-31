@@ -22,8 +22,10 @@ export enum IPermissionLevels {
 }
 
 export interface IGuild {
+	name: string;
+	icon?: string;
 	registered?: boolean;
-	adminCanEditPerms?: boolean;
+	nonAdminCanEditPerms?: boolean;
 }
 
 export interface IUser {

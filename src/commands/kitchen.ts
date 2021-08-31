@@ -1,27 +1,71 @@
-import { CommandInteraction, Interaction } from 'discord.js';
+import { CommandInteraction, Interaction, Permissions } from 'discord.js';
+import { setGuild } from '../database/guild';
 import { commands } from '../discord';
+import { firebaseAdmin } from '../util/firebase';
 
-const subcommands = new Map<string, (interaction: CommandInteraction) => any>();
+const subcommands = new Map<
+	string,
+	(interaction: CommandInteraction, subCommand: string) => any
+>();
 
-subcommands.set('general', (interaction) => {});
+subcommands.set('general', (interaction, subCommand) => {});
 
-subcommands.set('channel', (interaction) => {});
+subcommands.set('channel', (interaction, subCommand) => {});
 
-subcommands.set('balance', (interaction) => {});
+subcommands.set('balance', (interaction, subCommand) => {});
 
-subcommands.set('admin', (interaction) => {});
+subcommands.set('admin', async (interaction, subCommand) => {
+	const perms = interaction.member?.permissions;
+
+	if (!perms || interaction.guildId === null || typeof perms == 'string') {
+		return await interaction.reply(
+			'Kitchen Management is for Admins of Guilds Only!'
+		);
+	}
+
+	const isAdmin = perms.has(Permissions.FLAGS.ADMINISTRATOR);
+
+	if (!isAdmin) {
+		return await interaction.reply(
+			'Kitchen Management is for Admins of Guilds Only!'
+		);
+	}
+
+	switch (subCommand) {
+		case 'register':
+			setGuild(interaction.guildId, {
+				registered: true,
+				name: interaction.guild?.name,
+				icon: interaction.guild?.icon || undefined,
+			});
+			return await interaction.reply(
+				'Guild Registered! Read our guide on how to setup your own kitchen! ()'
+			);
+
+		default:
+			break;
+	}
+});
 
 commands.set('kitchen', {
 	run: async (interaction) => {
 		const subCommandGroup = interaction.options.getSubcommandGroup();
 		const subCommand = interaction.options.getSubcommand();
 
+		const user = interaction.member;
+
+		if (user === null) {
+			return await interaction.reply(
+				'Kitchen Management is for Guilds Only!'
+			);
+		}
+
 		console.log('kitchen', subCommandGroup, subCommand);
 
 		const run = subcommands.get(subCommandGroup);
 
 		if (run) {
-			await run(interaction);
+			await run(interaction, subCommand);
 		} else {
 			await interaction.reply('Error!');
 		}

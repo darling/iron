@@ -36,7 +36,7 @@ const mintCharacter = (preMint: IPreMintCharacter): ICharacter => {
 		((outItem.stats.endurance + outItem.stats.strength) / 2) * 10 +
 		outItem.stats.luck * 5;
 
-	if ((outItem.class = 'TANK')) {
+	if (outItem.class === 'TANK') {
 		outItem.hp += 30;
 		outItem.hp = clamp(outItem.hp, 70, Number.MAX_SAFE_INTEGER);
 	}

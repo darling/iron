@@ -16,10 +16,11 @@ export const calcSingleDamage = (char: ICharacter): number => {
 export const calcTeamDamage = (team: ITeam): number => {
 	const rand = random(0, 50);
 	let dmg = calcSingleDamage(team.first);
+	let secondDmg = calcSingleDamage(team.second);
 
 	const intLuck = rand < team.second.stats.intellect;
 
-	return ceil(dmg * (intLuck ? 1.5 : 1));
+	return ceil(dmg * (intLuck ? 1.5 : 1) + secondDmg);
 };
 
 const MAX_MOVES = 100;
@@ -78,21 +79,23 @@ export const calcWinner = (
 
 	let playerWin = hp > 0;
 
-	let losthp = minZero(round((ihp - hp) / 2));
+	let losthp = minZero(round(ihp - hp));
 
 	if (playerWin) {
 		if (team.second.class === 'MAGE' || team.first.class === 'MAGE') {
-			losthp /= 2;
+			losthp /= 1.3;
 		}
 
 		losthp = Math.abs(losthp);
 
 		team.first.hp = minZero(
-			team.first.hp - losthp + team.first.stats.magic
+			team.first.hp -
+				Math.ceil(Math.abs(-losthp + team.first.stats.magic))
 		);
 
 		team.second.hp = minZero(
-			team.second.hp - losthp + team.second.stats.magic
+			team.second.hp -
+				Math.ceil(Math.abs(-losthp + team.second.stats.magic))
 		);
 
 		if (team.first.hp <= 0 || team.second.hp <= 0) {
