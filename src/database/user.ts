@@ -1,7 +1,12 @@
 import { firestore } from 'firebase-admin';
+import { toNumber } from 'lodash';
+import { getConnection } from 'typeorm';
+
+import { client } from '../discord';
 import { ICharacter, ITeam, IUser } from '../types/db';
 import { getRandCharacter } from '../util/characters';
 import { firebaseAdmin } from '../util/firebase';
+import { User } from './models/User';
 
 const db = firebaseAdmin.firestore();
 
@@ -100,4 +105,31 @@ export const setPrimaryCharacter = async (
 
 export const setUserTeam = async (uid: string, team: ITeam) => {
 	await updateUser(uid, { primary: team.first, secondary: team.second });
+};
+
+/**
+ * Mint a new user into the db
+ * @param uid Discord UID
+ */
+export const newUser = async (uid: string) => {
+	const connection = getConnection();
+	const discordUser = await client.users.fetch(uid);
+
+	let user = new User();
+
+	user.id = uid;
+	// user.currency = 0;
+	user.name = discordUser.username;
+
+	try {
+		// const userRepository = connection.manager.getRepository(User);
+
+		// userRepository.delete({ id: uid });
+
+		connection.manager.save(user).then((user) => {
+			console.log(`New user [${user.id}] created!`);
+		});
+	} catch (error) {
+		console.error(error);
+	}
 };

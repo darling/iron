@@ -2,7 +2,7 @@ import { firestore } from 'firebase-admin';
 import { random } from 'lodash';
 import { getUser, updateUser } from '../database/user';
 import { commands } from '../discord';
-import { ITeam } from '../types/db';
+import { ITeam, IUser } from '../types/db';
 import { calcWinner } from '../util/battles';
 import { issueCharacter } from '../util/characters';
 
@@ -53,11 +53,23 @@ commands.set('battle', {
 
 		// Save results
 
-		await updateUser(interaction.user.id, {
+		let newUpdate: Partial<IUser> = {
 			currency: firestore.FieldValue.increment(currency) as any,
 			primary: results.modTeam.first, // New character states
 			secondary: results.modTeam.second,
-		});
+			battles: firestore.FieldValue.increment(1) as any,
+		};
+
+		if (results.playerWinner) {
+			newUpdate.wins = firestore.FieldValue.increment(1) as any;
+		} else {
+			results.modTeam.first.hp = 0;
+			results.modTeam.second.hp = 0;
+			newUpdate.primary = results.modTeam.first;
+			newUpdate.secondary = results.modTeam.second;
+		}
+
+		await updateUser(interaction.user.id, newUpdate);
 
 		// Generate response
 

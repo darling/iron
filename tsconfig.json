@@ -1,5 +1,9 @@
 {
 	"compilerOptions": {
+		// TYPEORM
+		"strictPropertyInitialization": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
 		/* Visit https://aka.ms/tsconfig.json to read more about this file */
 
 		/* Basic Options */

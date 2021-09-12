@@ -15,12 +15,6 @@ export interface IButton {
 	run: (interaction: ButtonInteraction) => any;
 }
 
-export enum IPermissionLevels {
-	DEVELOPER,
-	ADMIN,
-	MODERATOR,
-}
-
 export interface IGuild {
 	name: string;
 	icon?: string;
@@ -28,7 +22,19 @@ export interface IGuild {
 	nonAdminCanEditPerms?: boolean;
 }
 
+export interface ITeam {
+	first: ICharacter;
+	second: ICharacter;
+}
+
+export enum IPermissionLevels {
+	DEVELOPER,
+	ADMIN,
+	MODERATOR,
+}
+
 export interface IUser {
+	// Game related
 	premium?: boolean;
 	perm?: IPermissionLevels[];
 	currency?: number;
@@ -36,11 +42,21 @@ export interface IUser {
 	secondary?: ICharacter;
 	summonCrystals?: number;
 	characters?: ICharacter[];
+	kitchen?: string;
+	// Shared
+	battles?: number;
+	wins?: number;
+	// Web stuff
+	username?: string;
+	avatar?: string;
+	discrim?: string;
+	guilds?: { [id: string]: IUserGuild };
 }
 
-export interface ITeam {
-	first: ICharacter;
-	second: ICharacter;
+export interface IUserGuild {
+	icon: string | null;
+	name: string;
+	perms: number;
 }
 
 export interface IPreMintCharacter {

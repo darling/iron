@@ -35,7 +35,10 @@
 		"firebase-admin": "^9.11.0",
 		"fs": "^0.0.1-security",
 		"lodash": "^4.17.21",
-		"node": "^16.6.1"
+		"node": "^16.6.1",
+		"pg": "^8.7.1",
+		"reflect-metadata": "^0.1.13",
+		"typeorm": "^0.2.37"
 	},
 	"devDependencies": {
 		"@types/lodash": "^4.14.172",
