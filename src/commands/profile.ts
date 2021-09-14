@@ -1,12 +1,17 @@
-import { newUser, setUserTeam } from '../database/user';
+import { getUser } from '../database/user';
 import { commands } from '../discord';
-import { ITeam } from '../types/db';
-import { issueCharacter } from '../util/characters';
+import { userProfileEmbed } from '../util/prefabEmbeds';
 
 commands.set('profile', {
 	run: async (interaction) => {
-		await newUser(interaction.user.id);
-		interaction.reply('What?');
+		const user = await getUser(interaction.user.id);
+
+		const embed = await userProfileEmbed(user);
+
+		interaction.reply({
+			content: `\`\`\`json\n${JSON.stringify(user, null, 2)}\`\`\``,
+			embeds: [embed],
+		});
 	},
 	command: {
 		name: 'profile',

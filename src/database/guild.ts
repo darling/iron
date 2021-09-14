@@ -1,25 +1,48 @@
-import { Guild } from 'discord.js';
-import { IGuild } from '../types/db';
-import { firebaseAdmin } from '../util/firebase';
+import { Guild as DJSGuild } from 'discord.js';
+import { getConnection } from 'typeorm';
+import { client } from '../discord';
+import { Guild } from './models/Guild';
+import { getUser } from './user';
 
-const db = firebaseAdmin.firestore();
+/**
+ * get guild db entry
+ * @param guild Discord Guild Object
+ */
+export const getGuild = async (gid: string, relations?: string[]) => {
+	const guild = await client.guilds.cache.get(gid);
+
+	if (!guild) {
+		// If the bot isn't in the guild at all
+		// Mark my words this is going to be hell to figure out once sharding becomes a thing.
+		return;
+	}
+
+	const user = await getUser(guild.ownerId);
+	const connection = getConnection();
+
+	let entry = await connection
+		.getRepository(Guild)
+		.findOne({ id: gid }, { relations });
+
+	if (!entry) {
+		entry = new Guild(guild.id, guild.name, guild.icon, user);
+
+		// Double write to make sure that the new guild is initialized *sigh*
+		console.log(entry);
+	}
+
+	return entry;
+};
 
 /**
  * Adds a new guild to the database so that Ferris knows that it's been in the server
  * @param guild The guild to add to the database
  */
-export const newGuild = async (guild: Guild) => {
-	await setGuild(guild.id, {
-		name: guild.name,
-		icon: guild.icon || undefined,
-	});
-};
+export const newGuild = async (guild: DJSGuild) => {
+	const connection = getConnection();
+	const entry = await getGuild(guild.id);
 
-/**
- *	Write to Guild
- * @param id ID of the Guild
- * @param data The data to add to the guild, any data that is given overlaps existing data. Make sure to cast to any if the value is a firestore object
- */
-export const setGuild = async (id: string, data: Partial<IGuild>) => {
-	await db.collection('guilds').doc(id).set(data, { merge: true });
+	await connection.manager.save(entry);
+
+	return entry;
 };

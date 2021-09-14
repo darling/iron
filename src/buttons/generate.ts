@@ -1,8 +1,9 @@
 import { newPrimary } from '../database/chars';
-import { commands } from '../discord';
+import { buttons } from '../discord';
+import { deletedChar } from '../util/imagegen';
 import { generatedFood } from '../util/prefabEmbeds';
 
-commands.set('generate', {
+buttons.set('GENERATE', {
 	run: async (interaction) => {
 		const user = await newPrimary(interaction.user.id);
 
@@ -12,10 +13,10 @@ commands.set('generate', {
 
 		const embed = await generatedFood(user);
 
-		interaction.reply({ embeds: [embed] });
-	},
-	command: {
-		name: 'generate',
-		description: 'generate',
+		interaction.update({
+			embeds: [embed],
+			components: [],
+			content: 'Thanks!',
+		});
 	},
 });

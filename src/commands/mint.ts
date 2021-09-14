@@ -1,35 +1,20 @@
-import { MessageEmbed } from 'discord.js';
-import { sum, values } from 'lodash';
-import { addCharacterToUser } from '../database/user';
-
+import { Interaction } from 'discord.js';
+import { Character } from '../database/models/Character';
+import { getUser, setUserByUser } from '../database/user';
 import { commands } from '../discord';
-import { issueCharacter } from '../util/characters';
-import { COLORS } from '../util/colors';
 
 commands.set('mint', {
 	run: async (interaction) => {
-		const embed = new MessageEmbed();
+		// const character = new Character();
+		const user = await getUser(interaction.user.id);
+		const char = new Character();
 
-		const character = issueCharacter(
-			interaction.options.getString('name') || undefined
-		);
+		user.primary = char;
+		char.user = user;
 
-		embed.setColor(`#${COLORS.GREEN.LIGHT}`);
-		embed.setDescription(
-			`\`Total stats: ${sum(
-				values(character.stats)
-			)}\`\n\n\`\`\`json\n${JSON.stringify(character, null, 2)}\`\`\``
-		);
-		embed.setThumbnail(
-			`https://cdn.ferris.gg/img/food/${character.icon}.png`
-		);
-		embed.setTitle(`${interaction.user.username}'s New Character`);
+		await setUserByUser(user);
 
-		addCharacterToUser(interaction.user.id, character);
-
-		interaction.reply({
-			embeds: [embed],
-		});
+		interaction.reply('ACK');
 	},
 	command: {
 		name: 'mint',

@@ -32,6 +32,7 @@
 		"discord-api-types": "^0.22.0",
 		"discord.js": "^13.1.0",
 		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
 		"firebase-admin": "^9.11.0",
 		"fs": "^0.0.1-security",
 		"lodash": "^4.17.21",
@@ -41,6 +42,7 @@
 		"typeorm": "^0.2.37"
 	},
 	"devDependencies": {
+		"@types/koa": "^2.13.4",
 		"@types/lodash": "^4.14.172",
 		"eslint": "^7.32.0"
 	}

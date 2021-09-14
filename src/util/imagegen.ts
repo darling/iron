@@ -1,11 +1,10 @@
 import { createCanvas, loadImage } from 'canvas';
 import { chunk, keys, map, padStart, upperCase } from 'lodash';
 
-import { ICharacter, ITeam } from '../types/db';
 import { COLORS } from './colors';
 import { longformStatLabels } from './interactionData';
 
-export const genCharProfile = async (char: ICharacter) => {
+export const genCharProfile = async (char: any) => {
 	const w = 600;
 	const h = 400;
 
@@ -191,7 +190,7 @@ export const genCharProfile = async (char: ICharacter) => {
 	return canvas.toBuffer('image/png');
 };
 
-export const deletedChar = async (char: ICharacter) => {
+export const deletedChar = async (char: any) => {
 	const w = 600;
 	const h = 200;
 
@@ -234,7 +233,7 @@ export const deletedChar = async (char: ICharacter) => {
 	return canvas.toBuffer('image/png');
 };
 
-export const generateTeamView = async (team: ITeam) => {
+export const generateTeamView = async (team: any) => {
 	const w = 600;
 	const h = 400;
 

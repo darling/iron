@@ -1,87 +1,12 @@
-import { firestore } from 'firebase-admin';
-import { random } from 'lodash';
-import { getUser, updateUser } from '../database/user';
+import { getUser } from '../database/user';
 import { commands } from '../discord';
-import { ITeam, IUser } from '../types/db';
-import { calcWinner } from '../util/battles';
-import { issueCharacter } from '../util/characters';
+import { getBattleMessage } from '../util/battles';
 
 commands.set('battle', {
 	run: async (interaction) => {
-		const user = await getUser(interaction.user.id);
-		const userTeam = { first: user?.primary, second: user?.secondary };
+		const mo = getBattleMessage(interaction.user.id);
 
-		// Find reasons not to battle
-
-		if (!userTeam.first || !userTeam.second) {
-			interaction.reply({
-				content:
-					"Can't battle without a primary and secondary character!",
-				ephemeral: true,
-			});
-			return;
-		}
-
-		if (userTeam.first.hp <= 0 || userTeam.second.hp <= 0) {
-			interaction.reply({
-				content: 'ur char dead u cant battle',
-				ephemeral: true,
-			});
-			return;
-		}
-
-		const hp = {
-			first: userTeam.first.hp,
-			second: userTeam.second.hp,
-		};
-
-		// Set the stage
-
-		const enemy = issueCharacter();
-		const results = calcWinner(userTeam as ITeam, enemy);
-
-		// Generate prizes
-
-		const currency = random(10, 100);
-
-		// Calculate lost hp
-
-		console.log(userTeam.first.hp, results.modTeam.first.hp);
-
-		const firstLostHp = hp.first - results.modTeam.first.hp;
-		const secondLostHp = hp.second - results.modTeam.second.hp;
-
-		// Save results
-
-		let newUpdate: Partial<IUser> = {
-			currency: firestore.FieldValue.increment(currency) as any,
-			primary: results.modTeam.first, // New character states
-			secondary: results.modTeam.second,
-			battles: firestore.FieldValue.increment(1) as any,
-		};
-
-		if (results.playerWinner) {
-			newUpdate.wins = firestore.FieldValue.increment(1) as any;
-		} else {
-			results.modTeam.first.hp = 0;
-			results.modTeam.second.hp = 0;
-			newUpdate.primary = results.modTeam.first;
-			newUpdate.secondary = results.modTeam.second;
-		}
-
-		await updateUser(interaction.user.id, newUpdate);
-
-		// Generate response
-
-		interaction.reply(
-			`You ${results.playerWinner ? 'won' : 'died'} against a **${
-				enemy.name
-			}**!\n\nYou gained ~ ${currency} JAMs (WIP).\n\n\`\`\`json\n${
-				userTeam.first.name
-			}: lost ${firstLostHp} hp.\n${
-				userTeam.second.name
-			}: lost ${secondLostHp} hp.\`\`\``
-		);
+		interaction.reply({ ...mo, ephemeral: false });
 	},
 	command: {
 		name: 'battle',

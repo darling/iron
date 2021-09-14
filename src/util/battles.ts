@@ -1,19 +1,21 @@
-import { ceil, clamp, max, random, round } from 'lodash';
+import { MessageActionRow, MessageButton, MessageEmbed } from 'discord.js';
+import { ceil, clamp, max, random, round, sampleSize, startCase } from 'lodash';
 
-import { ICharacter, ITeam } from '../types/db';
+import { client } from '../discord';
+import { COOKING_VERBS } from './vocab';
 
 const minZero = (number: number): number => {
 	return max([number, 0]) || 0;
 };
 
-export const calcSingleDamage = (char: ICharacter): number => {
+export const calcSingleDamage = (char: any): number => {
 	const rand = random(0, 100);
 	const procLuck = rand < char.stats.luck;
 
 	return char.stats.strength * (procLuck ? 2 : 1);
 };
 
-export const calcTeamDamage = (team: ITeam): number => {
+export const calcTeamDamage = (team: any): number => {
 	const rand = random(0, 50);
 	let dmg = calcSingleDamage(team.first);
 	let secondDmg = calcSingleDamage(team.second);
@@ -27,9 +29,9 @@ const MAX_MOVES = 100;
 
 // Calculate winning character when put up against each other
 export const calcWinner = (
-	playerTeam: ITeam,
-	enemyChar: ICharacter
-): { modTeam: ITeam; playerWinner: boolean } => {
+	playerTeam: any,
+	enemyChar: any
+): { modTeam: any; playerWinner: boolean } => {
 	let team = playerTeam;
 	let hp = team.first.hp + team.second.hp;
 	let ihp = hp;
@@ -104,4 +106,48 @@ export const calcWinner = (
 	}
 
 	return { modTeam: team, playerWinner: playerWin };
+};
+
+/**
+ * Get a MessagePayload that invites a user to battle
+ * @returns MessagePayload like object with the correct buttons and messages setup
+ */
+export const getBattleMessage = (uid: string) => {
+	const embed = new MessageEmbed();
+
+	embed.setTitle('FIGHT PROMPT');
+	embed.setDescription(
+		'You are encountered by a food or something\n\n\nPick an option to fight!\n\n\n(insert photo here)'
+	);
+
+	const fightButtons = new MessageActionRow();
+
+	sampleSize(COOKING_VERBS, 3).forEach((item) => {
+		const button = new MessageButton({
+			customId: `BATTLE ${uid} ${item.toUpperCase()}`,
+			style: 'PRIMARY',
+			label: startCase(item),
+			type: 'BUTTON',
+		});
+
+		fightButtons.addComponents(button);
+	});
+
+	return { embeds: [embed], components: [fightButtons] };
+};
+
+/**
+ * Generate a battle invitation to a user's dm
+ * @param uid
+ * @returns
+ */
+export const createBattle = async (uid: string) => {
+	const user = await client.users.fetch(uid);
+	const channel = await user.createDM();
+
+	if (!channel || !channel.isText()) return;
+
+	// Create a character to fight against
+
+	channel.send(getBattleMessage(uid));
 };
