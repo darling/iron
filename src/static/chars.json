@@ -1,0 +1,922 @@
+[
+	{
+		"name": "Mashed Potato",
+		"icon": "001-mashed-potato",
+		"bio": "I'm Mashing!"
+	},
+	{
+		"name": "Honey",
+		"icon": "002-honey",
+		"bio": "Hey honey!"
+	},
+	{
+		"name": "Tofu",
+		"icon": "003-tofu",
+		"bio": "It's just a curd to me, I'm great!"
+	},
+	{
+		"name": "Watermelon",
+		"icon": "004-watermelon",
+		"bio": "What a melon!"
+	},
+	{
+		"name": "Bread",
+		"icon": "005-bread",
+		"bio": "I knead more so my humor can rise."
+	},
+	{
+		"name": "Egg",
+		"icon": "006-egg",
+		"bio": ":)"
+	},
+	{
+		"name": "Garlic",
+		"icon": "007-garlic",
+		"bio": "Stinky"
+	},
+	{
+		"name": "Cauliflower",
+		"icon": "008-cauliflower",
+		"bio": "Floret!"
+	},
+	{
+		"name": "Jam",
+		"icon": "009-jam",
+		"bio": "Fighting other foods is my jam!"
+	},
+	{
+		"name": "Carrot",
+		"icon": "010-carrot",
+		"bio": "I have great vision!"
+	},
+	{
+		"name": "Radish",
+		"icon": "011-radish",
+		"bio": "I'm a bit rad."
+	},
+	{
+		"name": "Olive Oil",
+		"icon": "012-olive-oil",
+		"bio": "Drink me!"
+	},
+	{
+		"name": "Orange",
+		"icon": "013-orange",
+		"bio": "Orange you glad I'm here?"
+	},
+	{
+		"name": "Yogurt",
+		"icon": "014-yogurt",
+		"bio": "Greek."
+	},
+	{
+		"name": "Coconut",
+		"icon": "015-coconut",
+		"bio": "I'm a tough nut to crack."
+	},
+	{
+		"name": "Peanut Butter",
+		"icon": "016-peanut-butter",
+		"bio": "Don't be jelly!"
+	},
+	{
+		"name": "Lettuce",
+		"icon": "017-lettuce",
+		"bio": "Lettuce be friends"
+	},
+	{
+		"name": "Red Beans",
+		"icon": "018-red-beans",
+		"bio": ">:3"
+	},
+	{
+		"name": "Sunny Side Up",
+		"icon": "019-sunny-side-up",
+		"bio": "I'll leave my enemies scrambled"
+	},
+	{
+		"name": "Butter",
+		"icon": "020-Butter",
+		"bio": "I don't want to spread it"
+	},
+	{
+		"name": "Milk",
+		"icon": "021-milk",
+		"bio": "An udder failure"
+	},
+	{
+		"name": "Cheese",
+		"icon": "022-cheese",
+		"bio": "Just gotta Brie-leave"
+	},
+	{
+		"name": "Grapes",
+		"icon": "023-grapes",
+		"bio": "nice."
+	},
+	{
+		"name": "Canned Food",
+		"icon": "024-canned-food",
+		"bio": "I'd give it an ate out of tin."
+	},
+	{
+		"name": "Peanut",
+		"icon": "025-peanut",
+		"bio": "Nice nuts"
+	},
+	{
+		"name": "Vegetable",
+		"icon": "026-vegetable",
+		"bio": "Healthy!"
+	},
+	{
+		"name": "Soy Milk",
+		"icon": "027-soy-milk",
+		"bio": "I'm like milk but not"
+	},
+	{
+		"name": "Infused Water",
+		"icon": "028-infused-water",
+		"bio": "I'm like water but not"
+	},
+	{
+		"name": "Apple Cider",
+		"icon": "029-apple-cider",
+		"bio": "Ready for battle!"
+	},
+	{
+		"name": "Spinach",
+		"icon": "030-spinach",
+		"bio": "Nobody likes me."
+	},
+	{
+		"name": "Banana",
+		"icon": "031-banana",
+		"bio": "You are bananas!"
+	},
+	{
+		"name": "Smoothie",
+		"icon": "032-smoothie",
+		"bio": "Smooth criminal"
+	},
+	{
+		"name": "Tomato",
+		"icon": "033-tomato",
+		"bio": "tomato tomato"
+	},
+	{
+		"name": "Granola",
+		"icon": "034-granola",
+		"bio": "I am just nuts"
+	},
+	{
+		"name": "Fruit Salad",
+		"icon": "035-fruit-salad",
+		"bio": "Yummy yummy!"
+	},
+	{
+		"name": "Pickles",
+		"icon": "036-pickles",
+		"bio": "I'm kind of a big dill"
+	},
+	{
+		"name": "Kimchi",
+		"icon": "037-kimchi",
+		"bio": "I'm pretty cultured"
+	},
+	{
+		"name": "Corn",
+		"icon": "038-corn",
+		"bio": "Corny"
+	},
+	{
+		"name": "Mushroom",
+		"icon": "039-mushroom",
+		"bio": "I have great morels"
+	},
+	{
+		"name": "Avocado",
+		"icon": "040-avocado",
+		"bio": "glockamole 🔫"
+	},
+	{
+		"name": "Oatmeal",
+		"icon": "041-oatmeal",
+		"bio": "I'm like meatloaf but I don't give an 'f'"
+	},
+	{
+		"name": "Green Tea",
+		"icon": "042-green-tea",
+		"bio": "Let's stir things up!"
+	},
+	{
+		"name": "Strawberry",
+		"icon": "043-strawberry",
+		"bio": "Berry powerful"
+	},
+	{
+		"name": "Boiled Egg",
+		"icon": "044-boiled-egg",
+		"bio": "Egg :)"
+	},
+	{
+		"name": "Papaya",
+		"icon": "045-papaya",
+		"bio": "YEAH!"
+	},
+	{
+		"name": "Pineapple",
+		"icon": "046-pineapple",
+		"bio": "Me and Pizza are a debatable match, what do you think?"
+	},
+	{
+		"name": "Apple",
+		"icon": "047-apple",
+		"bio": "Apples to Apples"
+	},
+	{
+		"name": "Almond",
+		"icon": "048-almond",
+		"bio": "I can make milk"
+	},
+	{
+		"name": "Broccoli",
+		"icon": "049-broccoli",
+		"bio": "The best vegetable"
+	},
+	{
+		"name": "Orange Juice",
+		"icon": "050-orange-juice",
+		"bio": "Where did Orange go?"
+	},
+	{
+		"name": "Banana",
+		"icon": "001-banana",
+		"bio": "Peel the burn!"
+	},
+	{
+		"name": "Beer",
+		"icon": "001-beer-2",
+		"bio": "I fear my last words will be ‘‘hold my beer and watch this.’’"
+	},
+	{
+		"name": "Chocolate Bunny",
+		"icon": "001-chocolate-bunny",
+		"bio": "Do I lay chocolate eggs?"
+	},
+	{
+		"name": "Orange",
+		"icon": "002-orange",
+		"bio": "Orange you glad to see me?"
+	},
+	{
+		"name": "Punch",
+		"icon": "002-punch-1",
+		"bio": "I like you a whole punch!"
+	},
+	{
+		"name": "Beers",
+		"icon": "003-beers",
+		"bio": "Ale in a day's work."
+	},
+	{
+		"name": "Cookie",
+		"icon": "003-cookie-2",
+		"bio": "That’s the way the cookie crumbles."
+	},
+	{
+		"name": "Lemon",
+		"icon": "003-lemon",
+		"bio": "I am simply the zest."
+	},
+	{
+		"name": "Cookie",
+		"icon": "004-cookie-1",
+		"bio": "You’re a smart cookie."
+	},
+	{
+		"name": "Tangerine",
+		"icon": "004-tangerine",
+		"bio": "Singerine divided by cosgerine."
+	},
+	{
+		"name": "Tomato Juice",
+		"icon": "004-tomato-juice",
+		"bio": "If you like vodka and tomato juice so much... then why don’t you bloody mary it!"
+	},
+	{
+		"name": "Gingerbread",
+		"icon": "005-gingerbread",
+		"bio": "Gluten Tag"
+	},
+	{
+		"name": "Ice Tea",
+		"icon": "005-ice-tea",
+		"bio": "Feeling f-ice-tea!"
+	},
+	{
+		"name": "Pumpkin",
+		"icon": "005-pumpkin",
+		"bio": "Go big or gourd home."
+	},
+	{
+		"name": "Chocolate Egg",
+		"icon": "006-chocolate-egg",
+		"bio": "Where's the rabbit"
+	},
+	{
+		"name": "Cucumber",
+		"icon": "006-cucumber",
+		"bio": "I'm in a pickle"
+	},
+	{
+		"name": "Lemonade",
+		"icon": "006-lemonade",
+		"bio": "I'll Schweppe you off your feet!"
+	},
+	{
+		"name": "Apple",
+		"icon": "007-apple",
+		"bio": "Hardcore."
+	},
+	{
+		"name": "Punch",
+		"icon": "007-punch",
+		"bio": "I'm not a knuckle-sandwich."
+	},
+	{
+		"name": "Ring Pop",
+		"icon": "007-ring-pop",
+		"bio": "You make my heart pop!"
+	},
+	{
+		"name": "Lollipop",
+		"icon": "008-lollipop-2",
+		"bio": "I'm a sucker for you!"
+	},
+	{
+		"name": "Pear",
+		"icon": "008-pear",
+		"bio": "We make a nice pear."
+	},
+	{
+		"name": "Soda",
+		"icon": "008-soda-2",
+		"bio": "Let's get fizzical!"
+	},
+	{
+		"name": "Broccoli",
+		"icon": "009-broccoli",
+		"bio": "You're a broc-star!"
+	},
+	{
+		"name": "Coffee Cup",
+		"icon": "009-coffee-cup",
+		"bio": "We're the perfect blend."
+	},
+	{
+		"name": "Gummy",
+		"icon": "009-gummy-5",
+		"bio": "I'm hooked onto you."
+	},
+	{
+		"name": "Cabbage",
+		"icon": "010-cabbage",
+		"bio": "I've got some emotional cabbage."
+	},
+	{
+		"name": "Chocolate",
+		"icon": "010-chocolate",
+		"bio": "I'm the sweetest"
+	},
+	{
+		"name": "Mint",
+		"icon": "010-mint-1",
+		"bio": "I think you just need some encourage-mint."
+	},
+	{
+		"name": "Asparagus",
+		"icon": "011-asparagus",
+		"bio": "I'm here to kick some as-paragus."
+	},
+	{
+		"name": "Barrel",
+		"icon": "011-barrel",
+		"bio": "I can barrel-y hold my excitement!"
+	},
+	{
+		"name": "Chocolate",
+		"icon": "011-chocolate-2",
+		"bio": "You make me melt."
+	},
+	{
+		"name": "Bok Choy",
+		"icon": "012-bok-choy",
+		"bio": "Choy to the world!"
+	},
+	{
+		"name": "Cocktail",
+		"icon": "012-cocktail-2",
+		"bio": "I like it dirty..."
+	},
+	{
+		"name": "Crepe",
+		"icon": "012-crepe",
+		"bio": "Crepe-er aww man."
+	},
+	{
+		"name": "Caramelized Apple",
+		"icon": "013-caramelized-apple",
+		"bio": "Caramel apple of my eye."
+	},
+	{
+		"name": "Leek",
+		"icon": "013-leek",
+		"bio": "There's a leek."
+	},
+	{
+		"name": "Water",
+		"icon": "013-water-1",
+		"bio": "Moisturized."
+	},
+	{
+		"name": "Jelly",
+		"icon": "014-jelly",
+		"bio": "I'll put my enemies in a jam!"
+	},
+	{
+		"name": "Milk",
+		"icon": "014-milk-1",
+		"bio": "Let's not cry over spilt milk..."
+	},
+	{
+		"name": "Pineapple",
+		"icon": "014-pineapple",
+		"bio": "I'm a fine-apple."
+	},
+	{
+		"name": "Lollipop",
+		"icon": "015-lollipop-1",
+		"bio": "Pop! Skip. Jump!"
+	},
+	{
+		"name": "Mushroom",
+		"icon": "015-mushroom",
+		"bio": "Make some shroom!"
+	},
+	{
+		"name": "Wine",
+		"icon": "015-wine-1",
+		"bio": "I'm only Debbie's third bottle!"
+	},
+	{
+		"name": "Cherries",
+		"icon": "016-cherries",
+		"bio": "We're cherrific!"
+	},
+	{
+		"name": "Coconut",
+		"icon": "016-coconut",
+		"bio": "I'm a tough nut to crack!"
+	},
+	{
+		"name": "Peanut Butter",
+		"icon": "016-peanut-butter",
+		"bio": "Much better than that Nutella guy!"
+	},
+	{
+		"name": "Berries",
+		"icon": "017-berries",
+		"bio": "I like you berry much!"
+	},
+	{
+		"name": "Cherry",
+		"icon": "017-cherry",
+		"bio": "I'm cherrific!"
+	},
+	{
+		"name": "Soda",
+		"icon": "017-soda-1",
+		"bio": "All my homies hate enamel."
+	},
+	{
+		"name": "Strawberry",
+		"icon": "018-strawberry",
+		"bio": "Put your hands up! This is a st-robbery!"
+	},
+	{
+		"name": "Sweet Potato",
+		"icon": "018-sweet-potato",
+		"bio": "I'm starchy and sweet!"
+	},
+	{
+		"name": "Vodka",
+		"icon": "018-vodka",
+		"bio": "Святой Дух."
+	},
+	{
+		"name": "Cocktail",
+		"icon": "019-cocktail-1",
+		"bio": "Born to rum"
+	},
+	{
+		"name": "Jam",
+		"icon": "019-jam",
+		"bio": "I'm ready to jam"
+	},
+	{
+		"name": "Pomegranate",
+		"icon": "019-pomegranate",
+		"bio": "Don't take me for pome-granted."
+	},
+	{
+		"name": "Juice",
+		"icon": "020-juice-1",
+		"bio": "Everything's going to be O J."
+	},
+	{
+		"name": "Lychee",
+		"icon": "020-Lychee",
+		"bio": "I'll never lychee go."
+	},
+	{
+		"name": "Pancakes",
+		"icon": "020-pancakes",
+		"bio": "I'll flatten you like a pancake!"
+	},
+	{
+		"name": "Banana Split",
+		"icon": "021-banana-split",
+		"bio": "Ready to split some skulls!"
+	},
+	{
+		"name": "Passion Fruit",
+		"icon": "021-passion-fruit",
+		"bio": "Drake."
+	},
+	{
+		"name": "Whisky",
+		"icon": "021-whisky",
+		"bio": "I think you're neat"
+	},
+	{
+		"name": "Churro",
+		"icon": "022-churro",
+		"bio": "Churro all I need!"
+	},
+	{
+		"name": "Frappe",
+		"icon": "022-frappe",
+		"bio": "I'd frappe that"
+	},
+	{
+		"name": "Tomato",
+		"icon": "022-tomato",
+		"bio": "Tomato tomato. who cares!"
+	},
+	{
+		"name": "Meringue",
+		"icon": "023-meringue",
+		"bio": "When life gives you lemons: make meringue"
+	},
+	{
+		"name": "Sangria",
+		"icon": "023-sangria",
+		"bio": "I'm like wine but better"
+	},
+	{
+		"name": "Watermelon",
+		"icon": "023-watermelon",
+		"bio": "I'm one in a melon"
+	},
+	{
+		"name": "Avocado",
+		"icon": "024-avocado",
+		"bio": "Holy guacamole!"
+	},
+	{
+		"name": "Beer",
+		"icon": "024-beer-1",
+		"bio": "Don’t worry. Be hoppy."
+	},
+	{
+		"name": "Candy Cane",
+		"icon": "024-candy-cane",
+		"bio": "I cane do it!"
+	},
+	{
+		"name": "Cocktail",
+		"icon": "025-cocktail",
+		"bio": "I like you-alada"
+	},
+	{
+		"name": "Corn",
+		"icon": "025-corn",
+		"bio": "The kernel of the vegetable forces."
+	},
+	{
+		"name": "Gummy",
+		"icon": "025-gummy-4",
+		"bio": "Where's my friends?"
+	},
+	{
+		"name": "Champagne",
+		"icon": "026-champagne",
+		"bio": "Bubbling with fun!"
+	},
+	{
+		"name": "Gummy",
+		"icon": "026-gummy-3",
+		"bio": "Gummy gummy in my tummy tummy!"
+	},
+	{
+		"name": "Kiwi",
+		"icon": "026-kiwi",
+		"bio": "Feeling cute."
+	},
+	{
+		"name": "Apricot",
+		"icon": "027-apricot",
+		"bio": "I'll aprishoot my enemies"
+	},
+	{
+		"name": "Frappuccino",
+		"icon": "027-frappuccino-1",
+		"bio": "I don't give a frappe."
+	},
+	{
+		"name": "Macaron",
+		"icon": "027-macaron",
+		"bio": "Let's get it macarON!"
+	},
+	{
+		"name": "Beet",
+		"icon": "028-beet",
+		"bio": "This vegetable can take a beeting!"
+	},
+	{
+		"name": "Juice",
+		"icon": "028-juice",
+		"bio": "The juice is loose!"
+	},
+	{
+		"name": "Sugar",
+		"icon": "028-sugar",
+		"bio": "The sugar cube took etiquette classes—now he’s refined."
+	},
+	{
+		"name": "Pepper",
+		"icon": "029-pepper",
+		"bio": "Spicy!"
+	},
+	{
+		"name": "Pudding",
+		"icon": "029-pudding",
+		"bio": "This snack packs a punch!"
+	},
+	{
+		"name": "Wine",
+		"icon": "029-wine",
+		"bio": "I'm a mer-lot of fun!"
+	},
+	{
+		"name": "Beer",
+		"icon": "030-beer",
+		"bio": "Life and beer are very similar. Chill for best results."
+	},
+	{
+		"name": "Chocolate",
+		"icon": "030-chocolate-1",
+		"bio": "CHOCOLATE? CHOCOLATE!"
+	},
+	{
+		"name": "Raspberry",
+		"icon": "030-Raspberry",
+		"bio": "Don't tell anyone this: I'm not even a real berry."
+	},
+	{
+		"name": "Peas",
+		"icon": "031-peas",
+		"bio": "I'm peas-ed to meet you!"
+	},
+	{
+		"name": "Pie",
+		"icon": "031-pie",
+		"bio": "Divide the circumference by diameter."
+	},
+	{
+		"name": "Tea Cup",
+		"icon": "031-tea-cup",
+		"bio": "I'm a quali-tea option!"
+	},
+	{
+		"name": "Donut",
+		"icon": "032-donut",
+		"bio": "Donut fool me for a weakling."
+	},
+	{
+		"name": "Frappuccino",
+		"icon": "032-frappuccino",
+		"bio": "Be frappy."
+	},
+	{
+		"name": "Radish",
+		"icon": "032-radish",
+		"bio": "I look radishing today."
+	},
+	{
+		"name": "Grapes",
+		"icon": "033-grapes",
+		"bio": "We're a bunch of fun!"
+	},
+	{
+		"name": "Orange Juice",
+		"icon": "033-orange-juice",
+		"bio": "Mint's mortal enemy."
+	},
+	{
+		"name": "Cupcake",
+		"icon": "034-cupcake",
+		"bio": "You bake me crazy."
+	},
+	{
+		"name": "Milkshake",
+		"icon": "034-milkshake",
+		"bio": "Let's milk-shake some things up!"
+	},
+	{
+		"name": "Guava",
+		"icon": "035-guava",
+		"bio": "I'd guava be a smoothie."
+	},
+	{
+		"name": "Gummy",
+		"icon": "035-gummy-2",
+		"bio": "Help me find my bretheren!"
+	},
+	{
+		"name": "Teapot",
+		"icon": "035-teapot",
+		"bio": "The tea cup is such a cute tea."
+	},
+	{
+		"name": "Carrot",
+		"icon": "036-carrot",
+		"bio": "I don't carrot all."
+	},
+	{
+		"name": "Cotton Candy",
+		"icon": "036-cotton-candy",
+		"bio": "On cloud nine."
+	},
+	{
+		"name": "Soda",
+		"icon": "036-soda",
+		"bio": "I'm a soft drink"
+	},
+	{
+		"name": "Candy",
+		"icon": "037-candy-1",
+		"bio": "Sweet dreams!"
+	},
+	{
+		"name": "Cappuccino",
+		"icon": "037-cappuccino",
+		"bio": "I'm brew-tiful!"
+	},
+	{
+		"name": "Pitaya",
+		"icon": "037-pitaya",
+		"bio": "May our love drag-on and on and on..."
+	},
+	{
+		"name": "Arugula",
+		"icon": "038-arugula",
+		"bio": "A regular salad ingredient."
+	},
+	{
+		"name": "Cookie",
+		"icon": "038-cookie",
+		"bio": "Why did the cookie go to the doctor? He was feeling crummy."
+	},
+	{
+		"name": "Milk",
+		"icon": "038-milk",
+		"bio": "I'm legendairy."
+	},
+	{
+		"name": "Aubergine",
+		"icon": "039-aubergine",
+		"bio": ";)"
+	},
+	{
+		"name": "Gummy Bear",
+		"icon": "039-gummy-bear",
+		"bio": "I've collected all the infinity gummies."
+	},
+	{
+		"name": "Water",
+		"icon": "039-water",
+		"bio": "Going with the flow..."
+	},
+	{
+		"name": "Coffee",
+		"icon": "040-coffee",
+		"bio": "A bitter adversary to those who cross them."
+	},
+	{
+		"name": "Olives",
+		"icon": "040-olives",
+		"bio": "Olive my job!"
+	},
+	{
+		"name": "Jelly Beans",
+		"icon": "041-jelly-beans",
+		"bio": "You just got bean-boozled!"
+	},
+	{
+		"name": "Papaya",
+		"icon": "041-papaya",
+		"bio": "Papayeah!"
+	},
+	{
+		"name": "Ginger",
+		"icon": "042-ginger",
+		"bio": "I have no soul."
+	},
+	{
+		"name": "Marshmallow",
+		"icon": "042-marshmallow-1",
+		"bio": "True to their name: mellow."
+	},
+	{
+		"name": "Mangosteen",
+		"icon": "043-mangosteen",
+		"bio": "Have you mango-seen my moves?"
+	},
+	{
+		"name": "Marshmallow",
+		"icon": "043-marshmallow",
+		"bio": "Contrary to their name: harsh."
+	},
+	{
+		"name": "Gummy",
+		"icon": "044-gummy-1",
+		"bio": "Gummy a hug"
+	},
+	{
+		"name": "Potato",
+		"icon": "044-potato",
+		"bio": "The starch of the competition!"
+	},
+	{
+		"name": "Candy",
+		"icon": "045-candy",
+		"bio": "This'll be sweet!"
+	},
+	{
+		"name": "Cake",
+		"icon": "046-cake",
+		"bio": "You want a piece of me?!"
+	},
+	{
+		"name": "Ice Cream",
+		"icon": "047-ice-cream",
+		"bio": "Ice to meet you!"
+	},
+	{
+		"name": "Mango",
+		"icon": "047-mango",
+		"bio": "Let this man-go!"
+	},
+	{
+		"name": "Garlic",
+		"icon": "048-garlic",
+		"bio": "I wear the best cloves!"
+	},
+	{
+		"name": "Gummy",
+		"icon": "048-gummy",
+		"bio": "Please just leave me alone."
+	},
+	{
+		"name": "Mint",
+		"icon": "049-mint",
+		"bio": "The type to mint-ce words."
+	},
+	{
+		"name": "Onion",
+		"icon": "049-onion",
+		"bio": "Making kids cry since the dawn of time."
+	},
+	{
+		"name": "Lettuce",
+		"icon": "050-lettuce",
+		"bio": "Lettuce do this!"
+	},
+	{
+		"name": "Lollipop",
+		"icon": "050-lollipop",
+		"bio": "Only knows how to sucker-punch."
+	}
+]

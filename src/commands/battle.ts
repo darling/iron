@@ -1,4 +1,3 @@
-import { getUser } from '../database/user';
 import { commands } from '../discord';
 import { getBattleMessage } from '../util/battles';
 

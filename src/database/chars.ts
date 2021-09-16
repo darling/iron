@@ -1,19 +1,31 @@
+import { Character } from '@prisma/client';
 import { max, random, sample, startCase } from 'lodash';
-import { getConnection } from 'typeorm';
+
+import { prisma } from '../pg';
+import charList from '../static/chars.json';
 import { NEGATIVE_FOOD_ADJECTIVES } from '../util/vocab';
-import { Character } from './models/Character';
-import { User } from './models/User';
-import { getUser } from './user';
 
 /**
- * @returns New Character
+ * @returns New Save-able Character
  */
-export const newChar = async (): Promise<Character> => {
-	return new Character();
+export const newChar = () => {
+	const char = sample(charList);
+
+	if (!char) throw 'Char sample error';
+
+	const hp = random(50, 100);
+
+	return {
+		name: char.name,
+		bio: char.bio,
+		hp: hp,
+		start_hp: hp,
+		icon: char.icon,
+	};
 };
 
-export const newEnemy = async (): Promise<Character> => {
-	let enemy = await newChar();
+export const newEnemy = () => {
+	let enemy = newChar();
 	enemy.name = startCase(`${sample(NEGATIVE_FOOD_ADJECTIVES)} ${enemy.name}`);
 	return enemy;
 };
@@ -23,20 +35,27 @@ export const newEnemy = async (): Promise<Character> => {
  * @param uid Discord UID
  * @returns User after mint
  */
-export const newPrimary = async (uid: string): Promise<User> => {
-	const connection = getConnection();
-	let char = await newChar();
+export const newPrimary = async (uid: string) => {
+	let char = newChar();
 
-	let user = await getUser(uid);
-
-	user.primary = char;
-	char.user = user;
-
-	user.lastPrimaryChange = new Date();
-
-	await connection.manager.save(user);
-
-	return user;
+	return await prisma.character.create({
+		data: {
+			...char,
+			owner: {
+				connectOrCreate: {
+					create: {
+						id: uid,
+					},
+					where: {
+						id: uid,
+					},
+				},
+			},
+		},
+		include: {
+			owner: true,
+		},
+	});
 };
 
 /**

@@ -1,12 +1,26 @@
-import { getUser } from '../database/user';
 import { commands } from '../discord';
+import { prisma } from '../pg';
 import { userProfileEmbed } from '../util/prefabEmbeds';
 
 commands.set('profile', {
 	run: async (interaction) => {
-		const user = await getUser(interaction.user.id);
+		const user = await prisma.user.findFirst({
+			where: { id: interaction.user.id },
+			include: {
+				character: true,
+			},
+		});
 
-		const embed = await userProfileEmbed(user);
+		if (!user) {
+			return interaction.reply({
+				content: `onboarding goes here`,
+			});
+		}
+
+		const embed = await userProfileEmbed({
+			...user,
+			character: user.character,
+		});
 
 		interaction.reply({
 			content: `\`\`\`json\n${JSON.stringify(user, null, 2)}\`\`\``,

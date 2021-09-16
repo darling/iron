@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Character {
+  id       Int     @id @default(autoincrement())
+  nickname String?
+
+  name String
+  icon String
+  bio  String
+
+  hp       Int
+  start_hp Int
+  battles  Int @default(0)
+  wins     Int @default(0)
+
+  createdDate DateTime @default(now())
+
+  owner User?
+}
+
+model Guild {
+  id String @id
+  name String
+  icon String?
+
+  vanity String @unique @default(uuid())
+
+  currency Int @default(0)
+
+  kitchen     Boolean @default(false)
+  publicView  Boolean @default(false)
+  publicJoin  Boolean @default(false)
+
+  ownerId String
+  owner   User   @relation(name: "owner", fields: [ownerId], references: [id])
+
+  staff User[] @relation(name: "staff")
+  cooks User[] @relation(name: "kitchen")
+}
+
+model User {
+  id      String  @id
+  premium Boolean @default(false)
+  vanity  String @unique @default(uuid())
+
+  currency Int @default(0)
+  battles  Int @default(0)
+  wins     Int @default(0)
+
+  inventory Json @default("{}")
+
+  characterId Int?       @unique
+  character   Character? @relation(fields: [characterId], references: [id])
+
+  ownedGuilds Guild[] @relation(name: "owner")
+  staffGuilds Guild[] @relation(name: "staff")
+
+  kitchenId String?
+  kitchen   Guild?  @relation(name: "kitchen", fields: [kitchenId], references: [id])
+}

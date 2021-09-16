@@ -1,14 +1,14 @@
+import { prisma } from '../pg';
 import { Guild as DJSGuild } from 'discord.js';
-import { getConnection } from 'typeorm';
 import { client } from '../discord';
-import { Guild } from './models/Guild';
-import { getUser } from './user';
+import { Guild } from '.prisma/client';
+import { omit } from 'lodash';
 
 /**
  * get guild db entry
  * @param guild Discord Guild Object
  */
-export const getGuild = async (gid: string, relations?: string[]) => {
+export const getGuild = async (gid: string) => {
 	const guild = await client.guilds.cache.get(gid);
 
 	if (!guild) {
@@ -17,21 +17,65 @@ export const getGuild = async (gid: string, relations?: string[]) => {
 		return;
 	}
 
-	const user = await getUser(guild.ownerId);
-	const connection = getConnection();
+	let g = await prisma.guild.findUnique({ where: { id: gid } });
 
-	let entry = await connection
-		.getRepository(Guild)
-		.findOne({ id: gid }, { relations });
-
-	if (!entry) {
-		entry = new Guild(guild.id, guild.name, guild.icon, user);
-
-		// Double write to make sure that the new guild is initialized *sigh*
-		console.log(entry);
+	if (!g) {
+		g = await prisma.guild.create({
+			data: {
+				id: gid,
+				vanity: gid,
+				name: guild.name,
+				icon: guild.icon,
+				owner: {
+					connectOrCreate: {
+						where: { id: guild.ownerId },
+						create: { id: guild.ownerId },
+					},
+				},
+			},
+		});
 	}
 
-	return entry;
+	return g;
+};
+
+export const updateGuild = async (gid: string, data: Partial<Guild>) => {
+	const guild = await client.guilds.cache.get(gid);
+
+	if (!guild) {
+		// If the bot isn't in the guild at all
+		// Mark my words this is going to be hell to figure out once sharding becomes a thing.
+		return;
+	}
+
+	await prisma.guild.upsert({
+		create: {
+			// hand mutate because I can't figure out the compiler
+			currency: data.currency,
+			kitchen: data.kitchen,
+			publicJoin: data.publicJoin,
+			publicView: data.publicView,
+			vanity: gid,
+			// Defaults:
+			id: gid,
+			name: guild.name,
+			icon: guild.icon,
+			owner: {
+				connectOrCreate: {
+					where: { id: guild.ownerId },
+					create: { id: guild.ownerId },
+				},
+			},
+		},
+		update: {
+			...omit(data, ['id']),
+			name: guild.name,
+			icon: guild.icon,
+		},
+		where: {
+			id: guild.id,
+		},
+	});
 };
 
 /**
@@ -39,10 +83,5 @@ export const getGuild = async (gid: string, relations?: string[]) => {
  * @param guild The guild to add to the database
  */
 export const newGuild = async (guild: DJSGuild) => {
-	const connection = getConnection();
-	const entry = await getGuild(guild.id);
-
-	await connection.manager.save(entry);
-
-	return entry;
+	return await getGuild(guild.id);
 };

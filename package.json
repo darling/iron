@@ -25,6 +25,7 @@
 	"homepage": "https://github.com/darling/iron#readme",
 	"dependencies": {
 		"@discordjs/rest": "^0.1.0-canary.0",
+		"@prisma/client": "3.0.2",
 		"@typescript-eslint/eslint-plugin": "^4.29.2",
 		"@typescript-eslint/parser": "^4.29.2",
 		"axios": "^0.21.1",
@@ -32,18 +33,18 @@
 		"discord-api-types": "^0.22.0",
 		"discord.js": "^13.1.0",
 		"dotenv": "^10.0.0",
-		"express": "^4.17.1",
 		"firebase-admin": "^9.11.0",
 		"fs": "^0.0.1-security",
 		"lodash": "^4.17.21",
-		"node": "^16.6.1",
-		"pg": "^8.7.1",
-		"reflect-metadata": "^0.1.13",
-		"typeorm": "^0.2.37"
+		"node": "^16.6.1"
 	},
 	"devDependencies": {
 		"@types/koa": "^2.13.4",
 		"@types/lodash": "^4.14.172",
-		"eslint": "^7.32.0"
+		"eslint": "^7.32.0",
+		"prisma": "3.0.2"
+	},
+	"prisma": {
+		"seed": "ts-node ./prisma/seed.ts"
 	}
 }

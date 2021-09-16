@@ -5,13 +5,13 @@ import { generatedFood } from '../util/prefabEmbeds';
 
 buttons.set('GENERATE', {
 	run: async (interaction) => {
-		const user = await newPrimary(interaction.user.id);
+		const char = await newPrimary(interaction.user.id);
 
-		if (!user.primary) {
-			return interaction.reply('An error occured?');
+		if (!char.owner) {
+			throw 'error: no owner attached to new char?';
 		}
 
-		const embed = await generatedFood(user);
+		const embed = await generatedFood({ ...char.owner, character: char });
 
 		interaction.update({
 			embeds: [embed],

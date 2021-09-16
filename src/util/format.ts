@@ -1,17 +1,13 @@
 import { floor, join, map, repeat, round, sample } from 'lodash';
 
-const FILLED_START = '<a:fs:887192032953647154>';
-const EMPTY_START = '<:estart:887194115836637224>';
+const FILLED_START = '<:bar_start:887353631391756310>';
+const EMPTY_START = '<:progress_start:887353631412731954>';
 
-const FILLED_END = '<a:fe:887192419085455381>';
-const EMPTY_END = '<:eend:887194115916316712>';
+const FILLED_END = '<:bar_end:887353631278518323> ';
+const EMPTY_END = '<:progress_end:887353631299481640>';
 
-const FILLED_MID = [
-	'<a:fm:887192032899104809>',
-	'<a:fm2:887193484786802748>',
-	'<a:fm3:887193484849709086>',
-];
-const EMPTY_MID = '<:ebar:887194116092489758>';
+const FILLED_MID = ['<:bar:887353631312085042>'];
+const EMPTY_MID = '<:progress:887353631349833738>';
 
 export const progressBar = (value: number, whole: number): string => {
 	const segments = 10;

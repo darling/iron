@@ -1,10 +1,9 @@
 import { MessageEmbed } from 'discord.js';
-import { startCase, startsWith } from 'lodash';
+
 import { battle } from '../database/battles';
 import { buttons } from '../discord';
 import { CURRENCY } from '../static/currency';
 import { progressBar } from '../util/format';
-import { deletedChar } from '../util/imagegen';
 
 buttons.set('BATTLE', {
 	run: async (interaction) => {
@@ -24,7 +23,7 @@ buttons.set('BATTLE', {
 
 		const results = await battle(interaction.user.id, interaction);
 
-		if (!results || !results.user.primary) {
+		if (!results || !results.user.character) {
 			return; // NULL CHECK
 		}
 
@@ -43,7 +42,7 @@ buttons.set('BATTLE', {
 			);
 
 		let desc = `**${interaction.user.username}**'s **${
-			results.user.primary.name
+			results.user.character.name
 		}** battled **${results.enemy.name}** and ${
 			results.winner ? 'won' : 'lost'
 		}!`;
@@ -59,12 +58,12 @@ buttons.set('BATTLE', {
 		embed.setDescription(desc);
 
 		embed.addField(
-			`${interaction.user.username}'s ${results.user.primary.name}`,
-			`HP: ${results.user.primary.hp}/${
-				results.user.primary.start_hp
+			`${interaction.user.username}'s ${results.user.character.name}`,
+			`HP: ${results.user.character.hp}/${
+				results.user.character.start_hp
 			}\n${progressBar(
-				results.user.primary.hp,
-				results.user.primary.start_hp
+				results.user.character.hp,
+				results.user.character.start_hp
 			)}`,
 			true
 		);

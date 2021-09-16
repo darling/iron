@@ -1,18 +1,31 @@
 import { newPrimary } from '../database/chars';
 import { commands } from '../discord';
-import { generatedFood } from '../util/prefabEmbeds';
+import { prisma } from '../pg';
+import { generatedFood, onboardUserEmbed } from '../util/prefabEmbeds';
 
 commands.set('generate', {
 	run: async (interaction) => {
-		const user = await newPrimary(interaction.user.id);
+		const user = await prisma.user.findUnique({
+			where: { id: interaction.user.id },
+		});
 
-		if (!user.primary) {
-			return interaction.reply('An error occured?');
+		if (!user) {
+			return interaction.reply(
+				await onboardUserEmbed(interaction.user.id)
+			);
 		}
 
-		const embed = await generatedFood(user);
+		const char = await newPrimary(interaction.user.id);
 
-		interaction.reply({ embeds: [embed] });
+		if (!char.owner) {
+			throw 'error: no owner attached to new char?';
+		}
+
+		const embed = await generatedFood({ ...char.owner, character: char });
+
+		interaction.reply({
+			embeds: [embed],
+		});
 	},
 	command: {
 		name: 'generate',

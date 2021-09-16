@@ -1,9 +1,10 @@
+import { User } from '.prisma/client';
 import { ButtonInteraction } from 'discord.js';
-import { random, toInteger } from 'lodash';
-import { getConnection } from 'typeorm';
+import { omit, pick, random, toInteger } from 'lodash';
+import { prisma } from '../pg';
+import { onboardUserEmbed } from '../util/prefabEmbeds';
 
 import { characterDamageAdd, newEnemy } from './chars';
-import { getUser } from './user';
 
 /**
  * Start and evoke everything that a battle needs.
@@ -13,9 +14,20 @@ import { getUser } from './user';
  * @return The results of the battle in custom obj | undefined if error
  */
 export const battle = async (uid: string, interaction: ButtonInteraction) => {
-	const user = await getUser(uid);
+	let user = await prisma.user.findFirst({
+		where: { id: uid },
+		include: {
+			character: true,
+		},
+	});
 
-	if (!user.primary) {
+	if (!user) {
+		return interaction.update(await onboardUserEmbed(uid));
+	}
+
+	let char = user.character;
+
+	if (!char) {
 		// Onboard the user here
 		return interaction.update({
 			content:
@@ -38,38 +50,48 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 	}
 
 	// Find reasons not to battle
-	if (user.primary.hp == 0) {
+	if (char.hp == 0) {
 		return interaction.update({
-			content: `**${user.primary.name}** is **dead**, you can not battle right now!`,
+			content: `**${char.name}** is **dead**, you can not battle right now!`,
 			components: [],
 			embeds: [],
 		});
 	}
 
+	// Generate the environment
+	let enemy = newEnemy();
+
 	// See who wins (RNG BASICALLY LOL)
 
-	const winner = random(0, 2) > 0;
+	let rng = 2;
 
-	// Generate the environment
+	if (char.hp > enemy.hp) {
+		rng++;
+	}
 
-	let enemy = await newEnemy();
+	// Determine winner
+
+	const winner = random(0, rng) > 0;
 
 	if (winner) {
 		user.wins++;
-		user.primary.wins++;
+		char.wins++;
 
 		enemy.hp = 0;
-		user.primary = await characterDamageAdd(
-			user.primary,
-			random(1, toInteger(user.primary.hp / 3))
+		char = await characterDamageAdd(
+			char,
+			random(1, toInteger(char.hp / 3))
 		);
 	} else {
 		enemy.hp = random(1, enemy.hp);
-		user.primary.hp = 0;
+		char = await characterDamageAdd(
+			char,
+			random(1, toInteger(char.start_hp / 2))
+		);
 	}
 
 	user.battles++;
-	user.primary.battles++;
+	char.battles++;
 
 	let earnedCurrency = 0;
 
@@ -79,8 +101,19 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 
 	user.currency += earnedCurrency;
 
-	const connection = getConnection();
-	await connection.manager.save(user);
+	await prisma.user.update({
+		data: {
+			...pick(user, ['currency', 'battles', 'wins']),
+			character: {
+				update: {
+					...omit(char, ['owner', 'ownerId', 'id']),
+				},
+			},
+		},
+		where: {
+			id: user.id,
+		},
+	});
 
 	return { enemy, winner, user, earnedCurrency };
 };
