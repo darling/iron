@@ -2,7 +2,7 @@ import { User } from '.prisma/client';
 import { ButtonInteraction } from 'discord.js';
 import { omit, pick, random, toInteger } from 'lodash';
 import { prisma } from '../pg';
-import { onboardUserEmbed } from '../util/prefabEmbeds';
+import { onboardUserEmbed, primaryDeadEmbed } from '../util/prefabEmbeds';
 
 import { characterDamageAdd, newEnemy } from './chars';
 
@@ -51,11 +51,7 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 
 	// Find reasons not to battle
 	if (char.hp == 0) {
-		return interaction.update({
-			content: `**${char.name}** is **dead**, you can not battle right now!`,
-			components: [],
-			embeds: [],
-		});
+		return interaction.update(await primaryDeadEmbed(user.id));
 	}
 
 	// Generate the environment
@@ -67,7 +63,10 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 
 	if (char.hp > enemy.hp) {
 		rng++;
+		rng++;
 	}
+
+	rng += char.stars;
 
 	// Determine winner
 
@@ -83,11 +82,12 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 			random(1, toInteger(char.hp / 3))
 		);
 	} else {
-		enemy.hp = random(1, enemy.hp);
-		char = await characterDamageAdd(
-			char,
-			random(1, toInteger(char.start_hp / 2))
-		);
+		enemy.hp = toInteger(random(enemy.hp / 2, enemy.hp));
+		char.hp = 0;
+		// char = await characterDamageAdd(
+		// 	char,
+		// 	random(toInteger(char.start_hp / 3), toInteger(char.start_hp / 2))
+		// );
 	}
 
 	user.battles++;
@@ -106,7 +106,13 @@ export const battle = async (uid: string, interaction: ButtonInteraction) => {
 			...pick(user, ['currency', 'battles', 'wins']),
 			character: {
 				update: {
-					...omit(char, ['owner', 'ownerId', 'id']),
+					...omit(char, [
+						'owner',
+						'ownerId',
+						'id',
+						'primaryId',
+						'createdDate',
+					]),
 				},
 			},
 		},

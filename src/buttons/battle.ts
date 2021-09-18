@@ -1,9 +1,11 @@
 import { MessageEmbed } from 'discord.js';
+import { union } from 'lodash';
 
 import { battle } from '../database/battles';
 import { buttons } from '../discord';
 import { CURRENCY } from '../static/currency';
 import { progressBar } from '../util/format';
+import { primaryDeadEmbed } from '../util/prefabEmbeds';
 
 buttons.set('BATTLE', {
 	run: async (interaction) => {
@@ -15,11 +17,6 @@ buttons.set('BATTLE', {
 				content: 'Hey, this battle was not meant for you.',
 			});
 		}
-
-		console.log(
-			'SOMEONE BATTLED THAT BITCH LETS GOO',
-			interaction.customId
-		);
 
 		const results = await battle(interaction.user.id, interaction);
 
@@ -77,9 +74,17 @@ buttons.set('BATTLE', {
 			true
 		);
 
-		await interaction.update({
+		let update: any = {
 			embeds: [embed],
 			components: [],
-		});
+		};
+
+		if (!results.winner) {
+			let a = await primaryDeadEmbed(interaction.user.id);
+			update.embeds = union(update.embeds, a.embeds);
+			update.components = union(update.components, a.components);
+		}
+
+		await interaction.update(update);
 	},
 });

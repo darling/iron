@@ -1,29 +1,35 @@
+import { MessageEmbed } from 'discord.js';
+import { compact, join, keys, map } from 'lodash';
 import { commands } from '../discord';
+import { prisma } from '../pg';
+import { getItem } from '../util/items';
+import { onboardUserEmbed } from '../util/prefabEmbeds';
 
 commands.set('inv', {
 	run: async (interaction) => {
-		// const embed = new MessageEmbed();
-		// const characters = await getUserCharacters(interaction.user.id);
-		// embed.setColor(`#${COLORS.INDIGO.LIGHT}`);
-		// embed.setDescription(
-		// 	`${map(
-		// 		characters,
-		// 		(char) =>
-		// 			`\`\`\`asciidoc\n${char.name}\n[ ${char.code} ]\`\`\`\n`
-		// 	).join('')}\nManage your characters using \`/character\`.`
-		// );
-		// embed.setTimestamp();
-		// embed.setAuthor(
-		// 	interaction.user.tag,
-		// 	interaction.user.avatarURL({ format: 'webp' }) || undefined
-		// );
-		// embed.setThumbnail(
-		// 	`https://cdn.ferris.gg/img/food/${sample(characters)?.icon}.png`
-		// );
-		// embed.setTitle(`${interaction.user.username}'s Characters`);
-		// interaction.reply({
-		// 	embeds: [embed],
-		// });
+		const user = await prisma.user.findUnique({
+			where: { id: interaction.user.id },
+		});
+
+		if (!user) {
+			return await onboardUserEmbed(interaction.user.id);
+		}
+
+		const embed = new MessageEmbed();
+
+		const items = compact(map(keys(user.inventory), getItem));
+
+		embed.setDescription(`${join(map(items, 'emoji'), ' ')}`);
+		embed.setTimestamp();
+		embed.setAuthor(
+			interaction.user.tag,
+			interaction.user.avatarURL() || undefined
+		);
+		embed.setTitle(`${interaction.user.username}'s Items`);
+
+		interaction.reply({
+			embeds: [embed],
+		});
 	},
 	command: {
 		name: 'inv',

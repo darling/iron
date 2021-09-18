@@ -1,17 +1,16 @@
 import { MessageEmbed } from 'discord.js';
 import { commands } from '../discord';
+import { prisma } from '../pg';
 import { COLORS } from '../util/colors';
 
 commands.set('help', {
 	run: async (interaction) => {
 		const embed = new MessageEmbed();
-
 		embed.setColor(`#${COLORS.INDIGO.PURE}`);
 		embed.setDescription(
 			'Ferris is a high-caliber community bot used to improve Discord servers and help communities grow.'
 		);
 		embed.setTitle('Need help using Ferris?');
-
 		interaction.reply({
 			embeds: [embed],
 			components: [

@@ -15,15 +15,22 @@ model Character {
   name String
   icon String
   bio  String
+  stars Int @default(0)
 
   hp       Int
   start_hp Int
   battles  Int @default(0)
   wins     Int @default(0)
 
+  emoji String @default("<:FerrisNo:769345886702141470>")
+
   createdDate DateTime @default(now())
 
-  owner User?
+  ownerId String
+  owner User? @relation(name: "owned", fields: [ownerId], references: [id])
+
+  primaryId String?
+  primary User? @relation(name: "primary", fields: [primaryId], references: [id])
 }
 
 model Guild {
@@ -55,10 +62,12 @@ model User {
   battles  Int @default(0)
   wins     Int @default(0)
 
+  keys Int @default(0)
+
   inventory Json @default("{}")
 
-  characterId Int?       @unique
-  character   Character? @relation(fields: [characterId], references: [id])
+  character   Character? @relation(name: "primary")
+  characters Character[] @relation(name: "owned")
 
   ownedGuilds Guild[] @relation(name: "owner")
   staffGuilds Guild[] @relation(name: "staff")

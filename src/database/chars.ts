@@ -13,7 +13,14 @@ export const newChar = () => {
 
 	if (!char) throw 'Char sample error';
 
-	const hp = random(50, 100);
+	let hp = random(50, 100);
+	const starChance = random(0, 100);
+
+	let stars = 0;
+
+	[85, 95, 99].forEach((val) => starChance > val && stars++);
+
+	hp += 50 * stars;
 
 	return {
 		name: char.name,
@@ -21,6 +28,8 @@ export const newChar = () => {
 		hp: hp,
 		start_hp: hp,
 		icon: char.icon,
+		emoji: char.emoji,
+		stars,
 	};
 };
 
@@ -41,19 +50,27 @@ export const newPrimary = async (uid: string) => {
 	return await prisma.character.create({
 		data: {
 			...char,
+			primary: {
+				connect: {
+					id: uid,
+				},
+			},
 			owner: {
-				connectOrCreate: {
-					create: {
-						id: uid,
-					},
-					where: {
-						id: uid,
-					},
+				connect: {
+					id: uid,
 				},
 			},
 		},
 		include: {
 			owner: true,
+		},
+	});
+};
+
+export const eatChar = async (cid: number) => {
+	return await prisma.character.delete({
+		where: {
+			id: cid,
 		},
 	});
 };

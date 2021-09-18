@@ -1,6 +1,6 @@
 import { commands } from '../discord';
 import { prisma } from '../pg';
-import { userProfileEmbed } from '../util/prefabEmbeds';
+import { onboardUserEmbed, userProfileEmbed } from '../util/prefabEmbeds';
 
 commands.set('profile', {
 	run: async (interaction) => {
@@ -8,22 +8,24 @@ commands.set('profile', {
 			where: { id: interaction.user.id },
 			include: {
 				character: true,
+				characters: true,
+				kitchen: true,
 			},
 		});
 
 		if (!user) {
-			return interaction.reply({
-				content: `onboarding goes here`,
-			});
+			return interaction.reply(
+				await onboardUserEmbed(interaction.user.id)
+			);
 		}
 
 		const embed = await userProfileEmbed({
 			...user,
 			character: user.character,
+			characters: user.characters,
 		});
 
 		interaction.reply({
-			content: `\`\`\`json\n${JSON.stringify(user, null, 2)}\`\`\``,
 			embeds: [embed],
 		});
 	},

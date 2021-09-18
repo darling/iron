@@ -1,922 +1,764 @@
 [
 	{
-		"name": "Mashed Potato",
-		"icon": "001-mashed-potato",
-		"bio": "I'm Mashing!"
+		"name": "Banana",
+		"icon": "001-banana",
+		"bio": "Peel the burn!",
+		"emoji": "<:001banana:888182648260943952>"
 	},
 	{
 		"name": "Honey",
 		"icon": "002-honey",
-		"bio": "Hey honey!"
-	},
-	{
-		"name": "Tofu",
-		"icon": "003-tofu",
-		"bio": "It's just a curd to me, I'm great!"
-	},
-	{
-		"name": "Watermelon",
-		"icon": "004-watermelon",
-		"bio": "What a melon!"
-	},
-	{
-		"name": "Bread",
-		"icon": "005-bread",
-		"bio": "I knead more so my humor can rise."
-	},
-	{
-		"name": "Egg",
-		"icon": "006-egg",
-		"bio": ":)"
-	},
-	{
-		"name": "Garlic",
-		"icon": "007-garlic",
-		"bio": "Stinky"
-	},
-	{
-		"name": "Cauliflower",
-		"icon": "008-cauliflower",
-		"bio": "Floret!"
-	},
-	{
-		"name": "Jam",
-		"icon": "009-jam",
-		"bio": "Fighting other foods is my jam!"
-	},
-	{
-		"name": "Carrot",
-		"icon": "010-carrot",
-		"bio": "I have great vision!"
-	},
-	{
-		"name": "Radish",
-		"icon": "011-radish",
-		"bio": "I'm a bit rad."
-	},
-	{
-		"name": "Olive Oil",
-		"icon": "012-olive-oil",
-		"bio": "Drink me!"
-	},
-	{
-		"name": "Orange",
-		"icon": "013-orange",
-		"bio": "Orange you glad I'm here?"
-	},
-	{
-		"name": "Yogurt",
-		"icon": "014-yogurt",
-		"bio": "Greek."
-	},
-	{
-		"name": "Coconut",
-		"icon": "015-coconut",
-		"bio": "I'm a tough nut to crack."
-	},
-	{
-		"name": "Peanut Butter",
-		"icon": "016-peanut-butter",
-		"bio": "Don't be jelly!"
-	},
-	{
-		"name": "Lettuce",
-		"icon": "017-lettuce",
-		"bio": "Lettuce be friends"
-	},
-	{
-		"name": "Red Beans",
-		"icon": "018-red-beans",
-		"bio": ">:3"
-	},
-	{
-		"name": "Sunny Side Up",
-		"icon": "019-sunny-side-up",
-		"bio": "I'll leave my enemies scrambled"
-	},
-	{
-		"name": "Butter",
-		"icon": "020-Butter",
-		"bio": "I don't want to spread it"
-	},
-	{
-		"name": "Milk",
-		"icon": "021-milk",
-		"bio": "An udder failure"
-	},
-	{
-		"name": "Cheese",
-		"icon": "022-cheese",
-		"bio": "Just gotta Brie-leave"
-	},
-	{
-		"name": "Grapes",
-		"icon": "023-grapes",
-		"bio": "nice."
-	},
-	{
-		"name": "Canned Food",
-		"icon": "024-canned-food",
-		"bio": "I'd give it an ate out of tin."
-	},
-	{
-		"name": "Peanut",
-		"icon": "025-peanut",
-		"bio": "Nice nuts"
-	},
-	{
-		"name": "Vegetable",
-		"icon": "026-vegetable",
-		"bio": "Healthy!"
-	},
-	{
-		"name": "Soy Milk",
-		"icon": "027-soy-milk",
-		"bio": "I'm like milk but not"
-	},
-	{
-		"name": "Infused Water",
-		"icon": "028-infused-water",
-		"bio": "I'm like water but not"
-	},
-	{
-		"name": "Apple Cider",
-		"icon": "029-apple-cider",
-		"bio": "Ready for battle!"
-	},
-	{
-		"name": "Spinach",
-		"icon": "030-spinach",
-		"bio": "Nobody likes me."
-	},
-	{
-		"name": "Banana",
-		"icon": "031-banana",
-		"bio": "You are bananas!"
-	},
-	{
-		"name": "Smoothie",
-		"icon": "032-smoothie",
-		"bio": "Smooth criminal"
-	},
-	{
-		"name": "Tomato",
-		"icon": "033-tomato",
-		"bio": "tomato tomato"
-	},
-	{
-		"name": "Granola",
-		"icon": "034-granola",
-		"bio": "I am just nuts"
-	},
-	{
-		"name": "Fruit Salad",
-		"icon": "035-fruit-salad",
-		"bio": "Yummy yummy!"
-	},
-	{
-		"name": "Pickles",
-		"icon": "036-pickles",
-		"bio": "I'm kind of a big dill"
-	},
-	{
-		"name": "Kimchi",
-		"icon": "037-kimchi",
-		"bio": "I'm pretty cultured"
-	},
-	{
-		"name": "Corn",
-		"icon": "038-corn",
-		"bio": "Corny"
-	},
-	{
-		"name": "Mushroom",
-		"icon": "039-mushroom",
-		"bio": "I have great morels"
-	},
-	{
-		"name": "Avocado",
-		"icon": "040-avocado",
-		"bio": "glockamole 🔫"
-	},
-	{
-		"name": "Oatmeal",
-		"icon": "041-oatmeal",
-		"bio": "I'm like meatloaf but I don't give an 'f'"
-	},
-	{
-		"name": "Green Tea",
-		"icon": "042-green-tea",
-		"bio": "Let's stir things up!"
-	},
-	{
-		"name": "Strawberry",
-		"icon": "043-strawberry",
-		"bio": "Berry powerful"
-	},
-	{
-		"name": "Boiled Egg",
-		"icon": "044-boiled-egg",
-		"bio": "Egg :)"
-	},
-	{
-		"name": "Papaya",
-		"icon": "045-papaya",
-		"bio": "YEAH!"
-	},
-	{
-		"name": "Pineapple",
-		"icon": "046-pineapple",
-		"bio": "Me and Pizza are a debatable match, what do you think?"
-	},
-	{
-		"name": "Apple",
-		"icon": "047-apple",
-		"bio": "Apples to Apples"
-	},
-	{
-		"name": "Almond",
-		"icon": "048-almond",
-		"bio": "I can make milk"
-	},
-	{
-		"name": "Broccoli",
-		"icon": "049-broccoli",
-		"bio": "The best vegetable"
-	},
-	{
-		"name": "Orange Juice",
-		"icon": "050-orange-juice",
-		"bio": "Where did Orange go?"
-	},
-	{
-		"name": "Banana",
-		"icon": "001-banana",
-		"bio": "Peel the burn!"
-	},
-	{
-		"name": "Beer",
-		"icon": "001-beer-2",
-		"bio": "I fear my last words will be ‘‘hold my beer and watch this.’’"
-	},
-	{
-		"name": "Chocolate Bunny",
-		"icon": "001-chocolate-bunny",
-		"bio": "Do I lay chocolate eggs?"
+		"bio": "Hey honey!",
+		"emoji": "<:002honey:888182648114139207>"
 	},
 	{
 		"name": "Orange",
 		"icon": "002-orange",
-		"bio": "Orange you glad to see me?"
-	},
-	{
-		"name": "Punch",
-		"icon": "002-punch-1",
-		"bio": "I like you a whole punch!"
+		"bio": "Orange you glad to see me?",
+		"emoji": "<:002orange:888182648244166687>"
 	},
 	{
 		"name": "Beers",
 		"icon": "003-beers",
-		"bio": "Ale in a day's work."
-	},
-	{
-		"name": "Cookie",
-		"icon": "003-cookie-2",
-		"bio": "That’s the way the cookie crumbles."
+		"bio": "Ale in a day's work.",
+		"emoji": "<:003beers:888182648269340692>"
 	},
 	{
 		"name": "Lemon",
 		"icon": "003-lemon",
-		"bio": "I am simply the zest."
+		"bio": "I am simply the zest.",
+		"emoji": "<:003lemon:888182648177065985>"
 	},
 	{
-		"name": "Cookie",
-		"icon": "004-cookie-1",
-		"bio": "You’re a smart cookie."
+		"name": "Tofu",
+		"icon": "003-tofu",
+		"bio": "It's just a curd to me, I'm great!",
+		"emoji": "<:003tofu:888182648088985612>"
 	},
 	{
 		"name": "Tangerine",
 		"icon": "004-tangerine",
-		"bio": "Singerine divided by cosgerine."
+		"bio": "Singerine divided by cosgerine.",
+		"emoji": "<:004tangerine:888182648349016065>"
 	},
 	{
-		"name": "Tomato Juice",
-		"icon": "004-tomato-juice",
-		"bio": "If you like vodka and tomato juice so much... then why don’t you bloody mary it!"
+		"name": "Watermelon",
+		"icon": "004-watermelon",
+		"bio": "What a melon!",
+		"emoji": "<:004watermelon:888182648441298944>"
+	},
+	{
+		"name": "Bread",
+		"icon": "005-bread",
+		"bio": "I knead more so my humor can rise.",
+		"emoji": "<:005bread:888182648109940738>"
 	},
 	{
 		"name": "Gingerbread",
 		"icon": "005-gingerbread",
-		"bio": "Gluten Tag"
-	},
-	{
-		"name": "Ice Tea",
-		"icon": "005-ice-tea",
-		"bio": "Feeling f-ice-tea!"
+		"bio": "Gluten Tag",
+		"emoji": "<:005gingerbread:888182648407719946>"
 	},
 	{
 		"name": "Pumpkin",
 		"icon": "005-pumpkin",
-		"bio": "Go big or gourd home."
-	},
-	{
-		"name": "Chocolate Egg",
-		"icon": "006-chocolate-egg",
-		"bio": "Where's the rabbit"
+		"bio": "Go big or gourd home.",
+		"emoji": "<:005pumpkin:888182648269340694>"
 	},
 	{
 		"name": "Cucumber",
 		"icon": "006-cucumber",
-		"bio": "I'm in a pickle"
+		"bio": "I'm in a pickle",
+		"emoji": "<:006cucumber:888182648244166689>"
+	},
+	{
+		"name": "Egg",
+		"icon": "006-egg",
+		"bio": ":)",
+		"emoji": "<:006egg:888182648575524904>"
 	},
 	{
 		"name": "Lemonade",
 		"icon": "006-lemonade",
-		"bio": "I'll Schweppe you off your feet!"
+		"bio": "I'll Schweppe you off your feet!",
+		"emoji": "<:006lemonade:888182648382554192>"
 	},
 	{
 		"name": "Apple",
 		"icon": "007-apple",
-		"bio": "Hardcore."
+		"bio": "Hardcore.",
+		"emoji": "<:007apple:888182648269340693>"
+	},
+	{
+		"name": "Garlic",
+		"icon": "007-garlic",
+		"bio": "Stinky",
+		"emoji": "<:007garlic:888182648424509460>"
 	},
 	{
 		"name": "Punch",
 		"icon": "007-punch",
-		"bio": "I'm not a knuckle-sandwich."
+		"bio": "I'm not a knuckle-sandwich.",
+		"emoji": "<:007punch:888182648441274368>"
 	},
 	{
-		"name": "Ring Pop",
-		"icon": "007-ring-pop",
-		"bio": "You make my heart pop!"
-	},
-	{
-		"name": "Lollipop",
-		"icon": "008-lollipop-2",
-		"bio": "I'm a sucker for you!"
+		"name": "Cauliflower",
+		"icon": "008-cauliflower",
+		"bio": "Floret!",
+		"emoji": "<:008cauliflower:888182648638427136>"
 	},
 	{
 		"name": "Pear",
 		"icon": "008-pear",
-		"bio": "We make a nice pear."
-	},
-	{
-		"name": "Soda",
-		"icon": "008-soda-2",
-		"bio": "Let's get fizzical!"
+		"bio": "We make a nice pear.",
+		"emoji": "<:008pear:888182648109944943>"
 	},
 	{
 		"name": "Broccoli",
 		"icon": "009-broccoli",
-		"bio": "You're a broc-star!"
+		"bio": "You're a broc-star!",
+		"emoji": "<:009broccoli:888182648441274369>"
 	},
 	{
-		"name": "Coffee Cup",
-		"icon": "009-coffee-cup",
-		"bio": "We're the perfect blend."
-	},
-	{
-		"name": "Gummy",
-		"icon": "009-gummy-5",
-		"bio": "I'm hooked onto you."
+		"name": "Jam",
+		"icon": "009-jam",
+		"bio": "Fighting other foods is my jam!",
+		"emoji": "<:009jam:888182648592277504>"
 	},
 	{
 		"name": "Cabbage",
 		"icon": "010-cabbage",
-		"bio": "I've got some emotional cabbage."
+		"bio": "I've got some emotional cabbage.",
+		"emoji": "<:010cabbage:888182648479047750>"
+	},
+	{
+		"name": "Carrot",
+		"icon": "010-carrot",
+		"bio": "I have great vision!",
+		"emoji": "<:010carrot:888182648466468894>"
 	},
 	{
 		"name": "Chocolate",
 		"icon": "010-chocolate",
-		"bio": "I'm the sweetest"
-	},
-	{
-		"name": "Mint",
-		"icon": "010-mint-1",
-		"bio": "I think you just need some encourage-mint."
+		"bio": "I'm the sweetest",
+		"emoji": "<:010chocolate:888182648583909406>"
 	},
 	{
 		"name": "Asparagus",
 		"icon": "011-asparagus",
-		"bio": "I'm here to kick some as-paragus."
+		"bio": "I'm here to kick some as-paragus.",
+		"emoji": "<:011asparagus:888182648579710996>"
 	},
 	{
 		"name": "Barrel",
 		"icon": "011-barrel",
-		"bio": "I can barrel-y hold my excitement!"
+		"bio": "I can barrel-y hold my excitement!",
+		"emoji": "<:011barrel:888182648562929665>"
 	},
 	{
-		"name": "Chocolate",
-		"icon": "011-chocolate-2",
-		"bio": "You make me melt."
-	},
-	{
-		"name": "Bok Choy",
-		"icon": "012-bok-choy",
-		"bio": "Choy to the world!"
-	},
-	{
-		"name": "Cocktail",
-		"icon": "012-cocktail-2",
-		"bio": "I like it dirty..."
+		"name": "Radish",
+		"icon": "011-radish",
+		"bio": "I'm a bit rad.",
+		"emoji": "<:011radish:888182648743284756>"
 	},
 	{
 		"name": "Crepe",
 		"icon": "012-crepe",
-		"bio": "Crepe-er aww man."
-	},
-	{
-		"name": "Caramelized Apple",
-		"icon": "013-caramelized-apple",
-		"bio": "Caramel apple of my eye."
+		"bio": "Crepe-er aww man.",
+		"emoji": "<:012crepe:888182648588107858>"
 	},
 	{
 		"name": "Leek",
 		"icon": "013-leek",
-		"bio": "There's a leek."
+		"bio": "There's a leek.",
+		"emoji": "<:013leek:888183428514742302>"
 	},
 	{
-		"name": "Water",
-		"icon": "013-water-1",
-		"bio": "Moisturized."
+		"name": "Orange",
+		"icon": "013-orange",
+		"bio": "Orange you glad I'm here?",
+		"emoji": "<:013orange:888183428418248734>"
 	},
 	{
 		"name": "Jelly",
 		"icon": "014-jelly",
-		"bio": "I'll put my enemies in a jam!"
-	},
-	{
-		"name": "Milk",
-		"icon": "014-milk-1",
-		"bio": "Let's not cry over spilt milk..."
+		"bio": "I'll put my enemies in a jam!",
+		"emoji": "<:014jelly:888183428032376864>"
 	},
 	{
 		"name": "Pineapple",
 		"icon": "014-pineapple",
-		"bio": "I'm a fine-apple."
+		"bio": "I'm a fine-apple.",
+		"emoji": "<:014pineapple:888183428573437972>"
 	},
 	{
-		"name": "Lollipop",
-		"icon": "015-lollipop-1",
-		"bio": "Pop! Skip. Jump!"
+		"name": "Yogurt",
+		"icon": "014-yogurt",
+		"bio": "Greek.",
+		"emoji": "<:014yogurt:888183428565065728>"
+	},
+	{
+		"name": "Coconut",
+		"icon": "015-coconut",
+		"bio": "I'm a tough nut to crack.",
+		"emoji": "<:015coconut:888183428661538816>"
 	},
 	{
 		"name": "Mushroom",
 		"icon": "015-mushroom",
-		"bio": "Make some shroom!"
-	},
-	{
-		"name": "Wine",
-		"icon": "015-wine-1",
-		"bio": "I'm only Debbie's third bottle!"
+		"bio": "Make some shroom!",
+		"emoji": "<:015mushroom:888183428183371807>"
 	},
 	{
 		"name": "Cherries",
 		"icon": "016-cherries",
-		"bio": "We're cherrific!"
+		"bio": "We're cherrific!",
+		"emoji": "<:016cherries:888183428590231583>"
 	},
 	{
 		"name": "Coconut",
 		"icon": "016-coconut",
-		"bio": "I'm a tough nut to crack!"
-	},
-	{
-		"name": "Peanut Butter",
-		"icon": "016-peanut-butter",
-		"bio": "Much better than that Nutella guy!"
+		"bio": "I'm a tough nut to crack!",
+		"emoji": "<:016coconut:888183428648960090>"
 	},
 	{
 		"name": "Berries",
 		"icon": "017-berries",
-		"bio": "I like you berry much!"
+		"bio": "I like you berry much!",
+		"emoji": "<:017berries:888183428460204133>"
 	},
 	{
 		"name": "Cherry",
 		"icon": "017-cherry",
-		"bio": "I'm cherrific!"
+		"bio": "I'm cherrific!",
+		"emoji": "<:017cherry:888183428669931550>"
 	},
 	{
-		"name": "Soda",
-		"icon": "017-soda-1",
-		"bio": "All my homies hate enamel."
+		"name": "Lettuce",
+		"icon": "017-lettuce",
+		"bio": "Lettuce be friends",
+		"emoji": "<:017lettuce:888183428577644554>"
 	},
 	{
 		"name": "Strawberry",
 		"icon": "018-strawberry",
-		"bio": "Put your hands up! This is a st-robbery!"
-	},
-	{
-		"name": "Sweet Potato",
-		"icon": "018-sweet-potato",
-		"bio": "I'm starchy and sweet!"
+		"bio": "Put your hands up! This is a st-robbery!",
+		"emoji": "<:018strawberry:888183428514742304>"
 	},
 	{
 		"name": "Vodka",
 		"icon": "018-vodka",
-		"bio": "Святой Дух."
-	},
-	{
-		"name": "Cocktail",
-		"icon": "019-cocktail-1",
-		"bio": "Born to rum"
+		"bio": "Святой Дух.",
+		"emoji": "<:018vodka:888183428590231584>"
 	},
 	{
 		"name": "Jam",
 		"icon": "019-jam",
-		"bio": "I'm ready to jam"
+		"bio": "I'm ready to jam",
+		"emoji": "<:019jam:888183428657332234>"
 	},
 	{
 		"name": "Pomegranate",
 		"icon": "019-pomegranate",
-		"bio": "Don't take me for pome-granted."
+		"bio": "Don't take me for pome-granted.",
+		"emoji": "<:019pomegranate:888183428648960091>"
 	},
 	{
-		"name": "Juice",
-		"icon": "020-juice-1",
-		"bio": "Everything's going to be O J."
+		"name": "Butter",
+		"icon": "020-Butter",
+		"bio": "I don't want to spread it",
+		"emoji": "<:020Butter:888183428661538817>"
 	},
 	{
 		"name": "Lychee",
 		"icon": "020-Lychee",
-		"bio": "I'll never lychee go."
+		"bio": "I'll never lychee go.",
+		"emoji": "<:020Lychee:888183428653154334>"
 	},
 	{
 		"name": "Pancakes",
 		"icon": "020-pancakes",
-		"bio": "I'll flatten you like a pancake!"
+		"bio": "I'll flatten you like a pancake!",
+		"emoji": "<:020pancakes:888183428577644555>"
 	},
 	{
-		"name": "Banana Split",
-		"icon": "021-banana-split",
-		"bio": "Ready to split some skulls!"
-	},
-	{
-		"name": "Passion Fruit",
-		"icon": "021-passion-fruit",
-		"bio": "Drake."
+		"name": "Milk",
+		"icon": "021-milk",
+		"bio": "An udder failure",
+		"emoji": "<:021milk:888183428766388275>"
 	},
 	{
 		"name": "Whisky",
 		"icon": "021-whisky",
-		"bio": "I think you're neat"
+		"bio": "I think you're neat",
+		"emoji": "<:021whisky:888183428627976213>"
+	},
+	{
+		"name": "Cheese",
+		"icon": "022-cheese",
+		"bio": "Just gotta Brie-leave",
+		"emoji": "<:022cheese:888183428669919313>"
 	},
 	{
 		"name": "Churro",
 		"icon": "022-churro",
-		"bio": "Churro all I need!"
+		"bio": "Churro all I need!",
+		"emoji": "<:022churro:888183428711850004>"
 	},
 	{
 		"name": "Frappe",
 		"icon": "022-frappe",
-		"bio": "I'd frappe that"
+		"bio": "I'd frappe that",
+		"emoji": "<:022frappe:888183428699262976>"
 	},
 	{
 		"name": "Tomato",
 		"icon": "022-tomato",
-		"bio": "Tomato tomato. who cares!"
+		"bio": "Tomato tomato. who cares!",
+		"emoji": "<:022tomato:888183428657332235>"
+	},
+	{
+		"name": "Grapes",
+		"icon": "023-grapes",
+		"bio": "nice.",
+		"emoji": "<:023grapes:888183428418248736>"
 	},
 	{
 		"name": "Meringue",
 		"icon": "023-meringue",
-		"bio": "When life gives you lemons: make meringue"
+		"bio": "When life gives you lemons: make meringue",
+		"emoji": "<:023meringue:888183428565065729>"
 	},
 	{
 		"name": "Sangria",
 		"icon": "023-sangria",
-		"bio": "I'm like wine but better"
+		"bio": "I'm like wine but better",
+		"emoji": "<:023sangria:888183428770594826>"
 	},
 	{
 		"name": "Watermelon",
 		"icon": "023-watermelon",
-		"bio": "I'm one in a melon"
+		"bio": "I'm one in a melon",
+		"emoji": "<:023watermelon:888183428460204134>"
 	},
 	{
 		"name": "Avocado",
 		"icon": "024-avocado",
-		"bio": "Holy guacamole!"
-	},
-	{
-		"name": "Beer",
-		"icon": "024-beer-1",
-		"bio": "Don’t worry. Be hoppy."
-	},
-	{
-		"name": "Candy Cane",
-		"icon": "024-candy-cane",
-		"bio": "I cane do it!"
+		"bio": "Holy guacamole!",
+		"emoji": "<:024avocado:888183428577644556>"
 	},
 	{
 		"name": "Cocktail",
 		"icon": "025-cocktail",
-		"bio": "I like you-alada"
+		"bio": "I like you-alada",
+		"emoji": "<:025cocktail:888183428590231585>"
 	},
 	{
 		"name": "Corn",
 		"icon": "025-corn",
-		"bio": "The kernel of the vegetable forces."
+		"bio": "The kernel of the vegetable forces.",
+		"emoji": "<:025corn:888183428858646548>"
 	},
 	{
-		"name": "Gummy",
-		"icon": "025-gummy-4",
-		"bio": "Where's my friends?"
+		"name": "Peanut",
+		"icon": "025-peanut",
+		"bio": "Nice nuts",
+		"emoji": "<:025peanut:888184180024950844>"
 	},
 	{
 		"name": "Champagne",
 		"icon": "026-champagne",
-		"bio": "Bubbling with fun!"
-	},
-	{
-		"name": "Gummy",
-		"icon": "026-gummy-3",
-		"bio": "Gummy gummy in my tummy tummy!"
+		"bio": "Bubbling with fun!",
+		"emoji": "<:026champagne:888184179647479819>"
 	},
 	{
 		"name": "Kiwi",
 		"icon": "026-kiwi",
-		"bio": "Feeling cute."
+		"bio": "Feeling cute.",
+		"emoji": "<:026kiwi:888184180104650752>"
+	},
+	{
+		"name": "Vegetable",
+		"icon": "026-vegetable",
+		"bio": "Healthy!",
+		"emoji": "<:026vegetable:888184179999793192>"
 	},
 	{
 		"name": "Apricot",
 		"icon": "027-apricot",
-		"bio": "I'll aprishoot my enemies"
-	},
-	{
-		"name": "Frappuccino",
-		"icon": "027-frappuccino-1",
-		"bio": "I don't give a frappe."
+		"bio": "I'll aprishoot my enemies",
+		"emoji": "<:027apricot:888184179903315968>"
 	},
 	{
 		"name": "Macaron",
 		"icon": "027-macaron",
-		"bio": "Let's get it macarON!"
+		"bio": "Let's get it macarON!",
+		"emoji": "<:027macaron:888184179941056572>"
 	},
 	{
 		"name": "Beet",
 		"icon": "028-beet",
-		"bio": "This vegetable can take a beeting!"
+		"bio": "This vegetable can take a beeting!",
+		"emoji": "<:028beet:888184180142395453>"
 	},
 	{
 		"name": "Juice",
 		"icon": "028-juice",
-		"bio": "The juice is loose!"
+		"bio": "The juice is loose!",
+		"emoji": "<:028juice:888184179982991420>"
 	},
 	{
 		"name": "Sugar",
 		"icon": "028-sugar",
-		"bio": "The sugar cube took etiquette classes—now he’s refined."
+		"bio": "The sugar cube took etiquette classes—now he’s refined.",
+		"emoji": "<:028sugar:888184180016562176>"
 	},
 	{
 		"name": "Pepper",
 		"icon": "029-pepper",
-		"bio": "Spicy!"
+		"bio": "Spicy!",
+		"emoji": "<:029pepper:888184179651641376>"
 	},
 	{
 		"name": "Pudding",
 		"icon": "029-pudding",
-		"bio": "This snack packs a punch!"
+		"bio": "This snack packs a punch!",
+		"emoji": "<:029pudding:888184179777499158>"
 	},
 	{
 		"name": "Wine",
 		"icon": "029-wine",
-		"bio": "I'm a mer-lot of fun!"
-	},
-	{
-		"name": "Beer",
-		"icon": "030-beer",
-		"bio": "Life and beer are very similar. Chill for best results."
-	},
-	{
-		"name": "Chocolate",
-		"icon": "030-chocolate-1",
-		"bio": "CHOCOLATE? CHOCOLATE!"
+		"bio": "I'm a mer-lot of fun!",
+		"emoji": "<:029wine:888184179974615080>"
 	},
 	{
 		"name": "Raspberry",
 		"icon": "030-Raspberry",
-		"bio": "Don't tell anyone this: I'm not even a real berry."
+		"bio": "Don't tell anyone this: I'm not even a real berry.",
+		"emoji": "<:030Raspberry:888184180058513439>"
+	},
+	{
+		"name": "Beer",
+		"icon": "030-beer",
+		"bio": "Life and beer are very similar. Chill for best results.",
+		"emoji": "<:030beer:888184179982991421>"
+	},
+	{
+		"name": "Spinach",
+		"icon": "030-spinach",
+		"bio": "Nobody likes me.",
+		"emoji": "<:030spinach:888184180066889768>"
+	},
+	{
+		"name": "Banana",
+		"icon": "031-banana",
+		"bio": "You are bananas!",
+		"emoji": "<:031banana:888184180012371988>"
 	},
 	{
 		"name": "Peas",
 		"icon": "031-peas",
-		"bio": "I'm peas-ed to meet you!"
+		"bio": "I'm peas-ed to meet you!",
+		"emoji": "<:031peas:888184180037529660>"
 	},
 	{
 		"name": "Pie",
 		"icon": "031-pie",
-		"bio": "Divide the circumference by diameter."
-	},
-	{
-		"name": "Tea Cup",
-		"icon": "031-tea-cup",
-		"bio": "I'm a quali-tea option!"
+		"bio": "Divide the circumference by diameter.",
+		"emoji": "<:031pie:888184179941056574>"
 	},
 	{
 		"name": "Donut",
 		"icon": "032-donut",
-		"bio": "Donut fool me for a weakling."
+		"bio": "Donut fool me for a weakling.",
+		"emoji": "<:032donut:888184180142395452>"
 	},
 	{
 		"name": "Frappuccino",
 		"icon": "032-frappuccino",
-		"bio": "Be frappy."
+		"bio": "Be frappy.",
+		"emoji": "<:032frappuccino:888184180058513438>"
 	},
 	{
 		"name": "Radish",
 		"icon": "032-radish",
-		"bio": "I look radishing today."
+		"bio": "I look radishing today.",
+		"emoji": "<:032radish:888184180037529661>"
+	},
+	{
+		"name": "Smoothie",
+		"icon": "032-smoothie",
+		"bio": "Smooth criminal",
+		"emoji": "<:032smoothie:888184179718783019>"
 	},
 	{
 		"name": "Grapes",
 		"icon": "033-grapes",
-		"bio": "We're a bunch of fun!"
+		"bio": "We're a bunch of fun!",
+		"emoji": "<:033grapes:888184180142395454>"
 	},
 	{
-		"name": "Orange Juice",
-		"icon": "033-orange-juice",
-		"bio": "Mint's mortal enemy."
+		"name": "Tomato",
+		"icon": "033-tomato",
+		"bio": "tomato tomato",
+		"emoji": "<:033tomato:888184179941056573>"
 	},
 	{
 		"name": "Cupcake",
 		"icon": "034-cupcake",
-		"bio": "You bake me crazy."
+		"bio": "You bake me crazy.",
+		"emoji": "<:034cupcake:888184180100431892>"
+	},
+	{
+		"name": "Granola",
+		"icon": "034-granola",
+		"bio": "I am just nuts",
+		"emoji": "<:034granola:888184180016562177>"
 	},
 	{
 		"name": "Milkshake",
 		"icon": "034-milkshake",
-		"bio": "Let's milk-shake some things up!"
+		"bio": "Let's milk-shake some things up!",
+		"emoji": "<:034milkshake:888184180159152158>"
 	},
 	{
 		"name": "Guava",
 		"icon": "035-guava",
-		"bio": "I'd guava be a smoothie."
-	},
-	{
-		"name": "Gummy",
-		"icon": "035-gummy-2",
-		"bio": "Help me find my bretheren!"
+		"bio": "I'd guava be a smoothie.",
+		"emoji": "<:035guava:888184180024950846>"
 	},
 	{
 		"name": "Teapot",
 		"icon": "035-teapot",
-		"bio": "The tea cup is such a cute tea."
+		"bio": "The tea cup is such a cute tea.",
+		"emoji": "<:035teapot:888184180108828793>"
 	},
 	{
 		"name": "Carrot",
 		"icon": "036-carrot",
-		"bio": "I don't carrot all."
+		"bio": "I don't carrot all.",
+		"emoji": "<:036carrot:888184180226285618>"
 	},
 	{
-		"name": "Cotton Candy",
-		"icon": "036-cotton-candy",
-		"bio": "On cloud nine."
+		"name": "Pickles",
+		"icon": "036-pickles",
+		"bio": "I'm kind of a big dill",
+		"emoji": "<:036pickles:888184180125605888>"
 	},
 	{
 		"name": "Soda",
 		"icon": "036-soda",
-		"bio": "I'm a soft drink"
-	},
-	{
-		"name": "Candy",
-		"icon": "037-candy-1",
-		"bio": "Sweet dreams!"
+		"bio": "I'm a soft drink",
+		"emoji": "<:036soda:888184180008169503>"
 	},
 	{
 		"name": "Cappuccino",
 		"icon": "037-cappuccino",
-		"bio": "I'm brew-tiful!"
+		"bio": "I'm brew-tiful!",
+		"emoji": "<:037cappuccino:888184179962019881>"
+	},
+	{
+		"name": "Kimchi",
+		"icon": "037-kimchi",
+		"bio": "I'm pretty cultured",
+		"emoji": "<:037kimchi:888184179777499159>"
 	},
 	{
 		"name": "Pitaya",
 		"icon": "037-pitaya",
-		"bio": "May our love drag-on and on and on..."
+		"bio": "May our love drag-on and on and on...",
+		"emoji": "<:037pitaya:888184180205301800>"
 	},
 	{
 		"name": "Arugula",
 		"icon": "038-arugula",
-		"bio": "A regular salad ingredient."
+		"bio": "A regular salad ingredient.",
+		"emoji": "<:038arugula:888184179903332366>"
+	},
+	{
+		"name": "Arugula",
+		"icon": "038-arugula",
+		"bio": "A regular salad ingredient.",
+		"emoji": "<:038arugula:888184179903332366>"
 	},
 	{
 		"name": "Cookie",
 		"icon": "038-cookie",
-		"bio": "Why did the cookie go to the doctor? He was feeling crummy."
+		"bio": "Why did the cookie go to the doctor? He was feeling crummy.",
+		"emoji": "<:038cookie:888184670930481185>"
+	},
+	{
+		"name": "Corn",
+		"icon": "038-corn",
+		"bio": "Corny",
+		"emoji": "<:038corn:888184671022772234>"
 	},
 	{
 		"name": "Milk",
 		"icon": "038-milk",
-		"bio": "I'm legendairy."
+		"bio": "I'm legendairy.",
+		"emoji": "<:038milk:888184671022772235>"
 	},
 	{
 		"name": "Aubergine",
 		"icon": "039-aubergine",
-		"bio": ";)"
+		"bio": ";)",
+		"emoji": "<:039aubergine:888184671312179240>"
 	},
 	{
-		"name": "Gummy Bear",
-		"icon": "039-gummy-bear",
-		"bio": "I've collected all the infinity gummies."
+		"name": "Mushroom",
+		"icon": "039-mushroom",
+		"bio": "I have great morels",
+		"emoji": "<:039mushroom:888184671140208670>"
 	},
 	{
 		"name": "Water",
 		"icon": "039-water",
-		"bio": "Going with the flow..."
+		"bio": "Going with the flow...",
+		"emoji": "<:039water:888184671123427378>"
+	},
+	{
+		"name": "Avocado",
+		"icon": "040-avocado",
+		"bio": "glockamole 🔫",
+		"emoji": "<:040avocado:888184671127601152>"
 	},
 	{
 		"name": "Coffee",
 		"icon": "040-coffee",
-		"bio": "A bitter adversary to those who cross them."
+		"bio": "A bitter adversary to those who cross them.",
+		"emoji": "<:040coffee:888184671173767228>"
 	},
 	{
 		"name": "Olives",
 		"icon": "040-olives",
-		"bio": "Olive my job!"
+		"bio": "Olive my job!",
+		"emoji": "<:040olives:888184671182159994>"
 	},
 	{
-		"name": "Jelly Beans",
-		"icon": "041-jelly-beans",
-		"bio": "You just got bean-boozled!"
+		"name": "Oatmeal",
+		"icon": "041-oatmeal",
+		"bio": "I'm like meatloaf but I don't give an 'f'",
+		"emoji": "<:041oatmeal:888184671190515742>"
 	},
 	{
 		"name": "Papaya",
 		"icon": "041-papaya",
-		"bio": "Papayeah!"
+		"bio": "Papayeah!",
+		"emoji": "<:041papaya:888184670762700871>"
 	},
 	{
 		"name": "Ginger",
 		"icon": "042-ginger",
-		"bio": "I have no soul."
-	},
-	{
-		"name": "Marshmallow",
-		"icon": "042-marshmallow-1",
-		"bio": "True to their name: mellow."
+		"bio": "I have no soul.",
+		"emoji": "<:042ginger:888184671186321448>"
 	},
 	{
 		"name": "Mangosteen",
 		"icon": "043-mangosteen",
-		"bio": "Have you mango-seen my moves?"
+		"bio": "Have you mango-seen my moves?",
+		"emoji": "<:043mangosteen:888184675141570630>"
 	},
 	{
 		"name": "Marshmallow",
 		"icon": "043-marshmallow",
-		"bio": "Contrary to their name: harsh."
+		"bio": "Contrary to their name: harsh.",
+		"emoji": "<:043marshmallow:888184671270240267>"
 	},
 	{
-		"name": "Gummy",
-		"icon": "044-gummy-1",
-		"bio": "Gummy a hug"
+		"name": "Strawberry",
+		"icon": "043-strawberry",
+		"bio": "Berry powerful",
+		"emoji": "<:043strawberry:888184670980804689>"
 	},
 	{
 		"name": "Potato",
 		"icon": "044-potato",
-		"bio": "The starch of the competition!"
+		"bio": "The starch of the competition!",
+		"emoji": "<:044potato:888184671211495434>"
 	},
 	{
 		"name": "Candy",
 		"icon": "045-candy",
-		"bio": "This'll be sweet!"
+		"bio": "This'll be sweet!",
+		"emoji": "<:045candy:888184671190515743>"
+	},
+	{
+		"name": "Papaya",
+		"icon": "045-papaya",
+		"bio": "YEAH!",
+		"emoji": "<:045papaya:888184671396044800>"
 	},
 	{
 		"name": "Cake",
 		"icon": "046-cake",
-		"bio": "You want a piece of me?!"
+		"bio": "You want a piece of me?!",
+		"emoji": "<:046cake:888184670930481186>"
 	},
 	{
-		"name": "Ice Cream",
-		"icon": "047-ice-cream",
-		"bio": "Ice to meet you!"
+		"name": "Pineapple",
+		"icon": "046-pineapple",
+		"bio": "Me and Pizza are a debatable match, what do you think?",
+		"emoji": "<:046pineapple:888184671387668530>"
+	},
+	{
+		"name": "Apple",
+		"icon": "047-apple",
+		"bio": "Apples to Apples",
+		"emoji": "<:047apple:888184671022772238>"
 	},
 	{
 		"name": "Mango",
 		"icon": "047-mango",
-		"bio": "Let this man-go!"
+		"bio": "Let this man-go!",
+		"emoji": "<:047mango:888184671089852417>"
+	},
+	{
+		"name": "Almond",
+		"icon": "048-almond",
+		"bio": "I can make milk",
+		"emoji": "<:048almond:888184671291203654>"
 	},
 	{
 		"name": "Garlic",
 		"icon": "048-garlic",
-		"bio": "I wear the best cloves!"
+		"bio": "I wear the best cloves!",
+		"emoji": "<:048garlic:888184671379271700>"
 	},
 	{
 		"name": "Gummy",
 		"icon": "048-gummy",
-		"bio": "Please just leave me alone."
+		"bio": "Please just leave me alone.",
+		"emoji": "<:048gummy:888184671207301133>"
+	},
+	{
+		"name": "Broccoli",
+		"icon": "049-broccoli",
+		"bio": "The best vegetable",
+		"emoji": "<:049broccoli:888184671127601153>"
 	},
 	{
 		"name": "Mint",
 		"icon": "049-mint",
-		"bio": "The type to mint-ce words."
+		"bio": "The type to mint-ce words.",
+		"emoji": "<:049mint:888184671119228960>"
 	},
 	{
 		"name": "Onion",
 		"icon": "049-onion",
-		"bio": "Making kids cry since the dawn of time."
+		"bio": "Making kids cry since the dawn of time.",
+		"emoji": "<:049onion:888184671278620693>"
 	},
 	{
 		"name": "Lettuce",
 		"icon": "050-lettuce",
-		"bio": "Lettuce do this!"
+		"bio": "Lettuce do this!",
+		"emoji": "<:050lettuce:888184671362506762>"
 	},
 	{
 		"name": "Lollipop",
 		"icon": "050-lollipop",
-		"bio": "Only knows how to sucker-punch."
+		"bio": "Only knows how to sucker-punch.",
+		"emoji": "<:050lollipop:888184671270227999>"
 	}
 ]

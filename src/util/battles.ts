@@ -1,7 +1,32 @@
-import { MessageActionRow, MessageButton, MessageEmbed } from 'discord.js';
-import { ceil, clamp, max, random, round, sampleSize, startCase } from 'lodash';
+import {
+	Interaction,
+	InteractionReplyOptions,
+	InteractionResponseType,
+	MessageActionRow,
+	MessageButton,
+	MessageEmbed,
+} from 'discord.js';
+import {
+	ceil,
+	clamp,
+	max,
+	random,
+	round,
+	sampleSize,
+	startCase,
+	join,
+	map,
+	omit,
+	remove,
+} from 'lodash';
 
 import { client } from '../discord';
+import { prisma } from '../pg';
+import {
+	charactersViewEmbed,
+	onboardUserEmbed,
+	primaryDeadEmbed,
+} from './prefabEmbeds';
 import { COOKING_VERBS } from './vocab';
 
 const minZero = (number: number): number => {
@@ -112,13 +137,77 @@ export const calcWinner = (
  * Get a MessagePayload that invites a user to battle
  * @returns MessagePayload like object with the correct buttons and messages setup
  */
-export const getBattleMessage = (uid: string) => {
+export const getBattleMessage = async (
+	uid: string
+): Promise<InteractionReplyOptions> => {
+	const user = await prisma.user.findUnique({
+		where: { id: uid },
+		include: {
+			character: true,
+			characters: true,
+			kitchen: true,
+		},
+	});
+
+	if (user == null) {
+		return await onboardUserEmbed(uid);
+	}
+
+	if (!user.character) {
+		return {
+			components: [
+				{
+					type: 'ACTION_ROW',
+					components: [
+						{
+							type: 'BUTTON',
+							style: 'PRIMARY',
+							label: 'Generate',
+							customId: 'GENERATE',
+						},
+					],
+				},
+			],
+			embeds: [
+				new MessageEmbed({
+					description:
+						'You do not have a primary fighter, do you want to generate one?',
+					color: 'WHITE',
+				}),
+			],
+		};
+	}
+
+	if (user.character.hp <= 0) {
+		return await primaryDeadEmbed(uid);
+	}
+
 	const embed = new MessageEmbed();
 
-	embed.setTitle('FIGHT PROMPT');
-	embed.setDescription(
-		'You are encountered by a food or something\n\n\nPick an option to fight!\n\n\n(insert photo here)'
-	);
+	embed.setTitle('Get ready to battle!');
+
+	user?.character &&
+		embed.setThumbnail(
+			`https://cdn.ferris.gg/img/food/${user.character.icon}.png`
+		);
+
+	let desc = '';
+
+	user?.character &&
+		(desc += join(
+			map(
+				remove(
+					user.characters,
+					(char) => char.id !== user.character?.id
+				),
+				'emoji'
+			),
+			' '
+		));
+
+	desc += '\n\nPick an option to fight!';
+
+	embed.setDescription(desc);
 
 	const fightButtons = new MessageActionRow();
 
@@ -149,5 +238,5 @@ export const createBattle = async (uid: string) => {
 
 	// Create a character to fight against
 
-	channel.send(getBattleMessage(uid));
+	channel.send(await getBattleMessage(uid));
 };

@@ -1,3 +1,4 @@
+import { join, map } from 'lodash';
 import { newPrimary } from '../database/chars';
 import { commands } from '../discord';
 import { prisma } from '../pg';
@@ -7,11 +8,23 @@ commands.set('generate', {
 	run: async (interaction) => {
 		const user = await prisma.user.findUnique({
 			where: { id: interaction.user.id },
+			include: {
+				characters: true,
+			},
 		});
 
 		if (!user) {
 			return interaction.reply(
 				await onboardUserEmbed(interaction.user.id)
+			);
+		}
+
+		if (user.characters.length >= 9) {
+			return interaction.reply(
+				`${join(
+					map(user.characters, 'emoji'),
+					' '
+				)}\n\nYour pantry is getting full! You need to **eat** or get rid of your food to free up space for new characters!`
 			);
 		}
 

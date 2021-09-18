@@ -9,8 +9,12 @@ const EMPTY_END = '<:progress_end:887353631299481640>';
 const FILLED_MID = ['<:bar:887353631312085042>'];
 const EMPTY_MID = '<:progress:887353631349833738>';
 
-export const progressBar = (value: number, whole: number): string => {
-	const segments = 10;
+export const progressBar = (
+	value: number,
+	whole: number,
+	options?: { length?: number }
+): string => {
+	const segments = options?.length || 10;
 
 	const bars = round((value / whole) * segments);
 

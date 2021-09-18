@@ -3,7 +3,7 @@ import { getBattleMessage } from '../util/battles';
 
 commands.set('battle', {
 	run: async (interaction) => {
-		const mo = getBattleMessage(interaction.user.id);
+		const mo = await getBattleMessage(interaction.user.id);
 
 		interaction.reply({ ...mo, ephemeral: false });
 	},

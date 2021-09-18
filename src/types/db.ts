@@ -2,6 +2,7 @@ import {
 	ApplicationCommandData,
 	ButtonInteraction,
 	CommandInteraction,
+	SelectMenuInteraction,
 } from 'discord.js';
 
 export interface ICommand {
@@ -13,6 +14,10 @@ export interface ICommand {
 
 export interface IButton {
 	run: (interaction: ButtonInteraction) => any;
+}
+
+export interface ISelect {
+	run: (interaction: SelectMenuInteraction) => any;
 }
 
 // export interface IGuild {

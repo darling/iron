@@ -29,7 +29,6 @@ buttons.set('NEWUSER', {
 		});
 
 		const user = await client.users.fetch(interaction.user.id);
-		const channel = await user.createDM();
 
 		const embed = new MessageEmbed();
 
@@ -42,10 +41,8 @@ buttons.set('NEWUSER', {
 			)
 			.setImage('https://i.imgur.com/YYlN4QW.png');
 
-		channel.send({
+		interaction.channel?.send({
 			embeds: [embed],
 		});
-
-		interaction.deferUpdate();
 	},
 });
