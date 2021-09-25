@@ -31,11 +31,11 @@ buttons.set('BATTLE', {
 			.setAuthor(
 				interaction.user.username,
 				interaction.user.avatarURL() ||
-					'https://ferris.gg/img/placeholder.png'
+					'https://cdn.ferris.gg/img/placeholder.png'
 			)
 			.setColor(results.winner ? 'GREEN' : 'RED')
 			.setThumbnail(
-				`https://ferris.gg/img/food/${results.enemy.icon}.png`
+				`https://cdn.ferris.gg/img/food/${results.enemy.icon}.png`
 			);
 
 		let desc = `**${interaction.user.username}**'s **${

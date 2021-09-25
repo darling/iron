@@ -25,6 +25,7 @@ import { CURRENCY } from '../static/currency';
 import { STAR_EMOJI } from '../static/emoji';
 import { progressBar } from './format';
 import items from '../static/items.json';
+import { getItemMeta } from './items';
 
 /**
  * Gives the embed used after a new food is generated for a user
@@ -44,7 +45,9 @@ export const generatedFood = async (
 
 	embed.setColor('WHITE').setTimestamp();
 
-	embed.setThumbnail(`https://ferris.gg/img/food/${user.character.icon}.png`);
+	embed.setThumbnail(
+		`https://cdn.ferris.gg/img/food/${user.character.icon}.png`
+	);
 
 	embed.setDescription(
 		`**${discordUser.username}** went shopping and picked up: **${
@@ -86,7 +89,9 @@ export const characterViewEmbed = async (
 		return embed;
 	}
 
-	embed.setThumbnail(`https://ferris.gg/img/food/${user.character.icon}.png`);
+	embed.setThumbnail(
+		`https://cdn.ferris.gg/img/food/${user.character.icon}.png`
+	);
 
 	embed.setDescription(
 		`**${discordUser.username}**'s **${user.character.name}**\n\n*${
@@ -131,11 +136,12 @@ export const userProfileEmbed = async (
 	if (!user.character) {
 		// Onboarding shits
 		embed.setThumbnail(
-			discordUser.avatarURL() || 'https://ferris.gg/img/placeholder.png'
+			discordUser.avatarURL() ||
+				'https://cdn.ferris.gg/img/placeholder.png'
 		);
 	} else {
 		embed.setThumbnail(
-			`https://ferris.gg/img/food/${user.character.icon}.png`
+			`https://cdn.ferris.gg/img/food/${user.character.icon}.png`
 		);
 
 		embed.addField(
@@ -170,7 +176,7 @@ export const guildProfileEmbed = async (guild: Guild) => {
 	embed
 		.setTitle(guild.name)
 		.setThumbnail(
-			djsGuild.iconURL() || 'https://ferris.gg/img/placeholder.png'
+			djsGuild.iconURL() || 'https://cdn.ferris.gg/img/placeholder.png'
 		);
 
 	if (guild.kitchen) {
@@ -453,7 +459,9 @@ export const itemShopInspection = (item: typeof items[0]) => {
 	embed.setDescription(
 		`**${item.name}** is a **${lowerCase(item.type)}** item.\n\n*${
 			item.bio
-		}*\n\n${item.description}\n\nPrice: ${item.price} ${CURRENCY.EMOJI}`
+		}*\n\n${item.description}\n\n${getItemMeta(item)}\n\nPrice: ${
+			item.price
+		} ${CURRENCY.EMOJI}`
 	);
 
 	const actionRow = new MessageActionRow();

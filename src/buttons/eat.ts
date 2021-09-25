@@ -1,8 +1,8 @@
+import { MessageEmbed } from 'discord.js';
 import { toNumber } from 'lodash';
-import { eatChar, newPrimary } from '../database/chars';
+
+import { eatChar } from '../database/chars';
 import { buttons } from '../discord';
-import { deletedChar } from '../util/imagegen';
-import { generatedFood } from '../util/prefabEmbeds';
 
 buttons.set('EAT', {
 	run: async (interaction) => {
@@ -17,9 +17,15 @@ buttons.set('EAT', {
 
 		const char = await eatChar(toNumber(cid));
 
+		const embed = new MessageEmbed();
+
+		embed
+			.setColor('WHITE')
+			.setTimestamp()
+			.setDescription(`${char.emoji} **${char.name}** was eaten!`);
+
 		interaction.update({
-			content: `${char.emoji} **${char.name}** was eaten!`,
-			embeds: [],
+			embeds: [embed],
 			components: [],
 		});
 	},

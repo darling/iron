@@ -1,16 +1,24 @@
 import { MessageEmbed } from 'discord.js';
+import { join, map, sampleSize } from 'lodash';
+
 import { commands } from '../discord';
-import { prisma } from '../pg';
-import { COLORS } from '../util/colors';
+import charList from '../static/chars.json';
 
 commands.set('help', {
 	run: async (interaction) => {
 		const embed = new MessageEmbed();
-		embed.setColor(`#${COLORS.INDIGO.PURE}`);
+		embed.setColor('WHITE');
+
 		embed.setDescription(
-			'Ferris is a high-caliber community bot used to improve Discord servers and help communities grow.'
+			`Ferris is a yummy way to enhance your Discord server! Food fights and Kitchen wars will rally your community to fight against food!\n\n${join(
+				map(sampleSize(charList, 8), 'emoji'),
+				' '
+			)}`
 		);
+
+		embed.setImage(`https://cdn.ferris.gg/img/food-bar-two.png`);
 		embed.setTitle('Need help using Ferris?');
+
 		interaction.reply({
 			embeds: [embed],
 			components: [

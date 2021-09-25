@@ -40,7 +40,7 @@ export const getGuild = async (gid: string) => {
 };
 
 export const updateGuild = async (gid: string, data: Partial<Guild>) => {
-	const guild = await client.guilds.cache.get(gid);
+	const guild = client.guilds.cache.get(gid);
 
 	if (!guild) {
 		// If the bot isn't in the guild at all
@@ -83,5 +83,5 @@ export const updateGuild = async (gid: string, data: Partial<Guild>) => {
  * @param guild The guild to add to the database
  */
 export const newGuild = async (guild: DJSGuild) => {
-	return await getGuild(guild.id);
+	return await updateGuild(guild.id, {});
 };

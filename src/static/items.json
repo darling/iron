@@ -4,8 +4,9 @@
 		"bio": "For sizzle",
 		"emoji": "<:fryingpan:888605381369139200>",
 		"icon": "022-frying-pan",
-		"description": "Give your character a 'Sizzled' title.",
+		"description": "Your character could use a little Sizzle if you know what I mean.",
 		"type": "COSMETIC",
+		"value": "Sizzled",
 		"price": 40
 	},
 	{
@@ -15,6 +16,7 @@
 		"icon": "046-salt",
 		"description": "Prolong the life of your food using a little bit of salt.",
 		"type": "HEALING",
+		"value": "50",
 		"price": 50
 	},
 	{
@@ -24,6 +26,7 @@
 		"icon": "025-bowl",
 		"description": "Your food will live longer if you carry it in a bowl.",
 		"type": "HEALING",
+		"value": "50",
 		"price": 50
 	}
 ]
