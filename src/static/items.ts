@@ -4,7 +4,6 @@ import { Character, Prisma, User } from '.prisma/client';
 import { prisma } from '../pg';
 import { min, toInteger } from 'lodash';
 
-//@ts-ignore
 export const itemPrefabs = new Map<
 	ReturnType<typeof getItem>['type'],
 	{
