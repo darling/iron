@@ -956,7 +956,7 @@ discord-api-types@^0.22.0:
 
 discord.js@^13.1.0:
   version "13.1.0"
-  resolved "https://registry.npmjs.org/discord.js/-/discord.js-13.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.1.0.tgz#99f6a2a8be88d31906ff0148e9b1cb603ebb2e2e"
   integrity sha512-gxO4CXKdHpqA+WKG+f5RNnd3srTDj5uFJHgOathksDE90YNq/Qijkd2WlMgTTMS6AJoEnHxI7G9eDQHCuZ+xDA==
   dependencies:
     "@discordjs/builders" "^0.5.0"
