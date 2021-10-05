@@ -8,9 +8,7 @@
 	"scripts": {
 		"dev": "tsc && node dist/app.js",
 		"start": "node dist/app.js",
-		"build": "tsc",
-		"processchardata": "tsc && dist/scripts/crunch.js",
-		"install": "bash scripts/install.sh"
+		"build": "tsc"
 	},
 	"repository": {
 		"type": "git",
