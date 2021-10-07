@@ -5,8 +5,8 @@ commands.set('register', {
 		const name = interaction.options.getString('name', true);
 		if (!name) return;
 
-		if (interaction.user.id !== '141075183271280641') {
-			await interaction.reply("You're not @safe");
+		if (interaction.user.id !== '534165671651573781') {
+			await interaction.reply("You're not @loom");
 			return;
 		}
 
@@ -23,7 +23,7 @@ commands.set('register', {
 			}
 		}
 
-		await interaction.reply('ACK');
+		await interaction.reply('Interaction registered');
 	},
 	command: {
 		name: 'register',

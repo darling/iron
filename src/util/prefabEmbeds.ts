@@ -26,6 +26,7 @@ import { STAR_EMOJI } from '../static/emoji';
 import { progressBar } from './format';
 import items from '../static/items.json';
 import { getItemMeta } from './items';
+import { Decimal } from '@prisma/client/runtime';
 
 /**
  * Gives the embed used after a new food is generated for a user
@@ -145,8 +146,8 @@ export const userProfileEmbed = async (
 		);
 
 		embed.addField(
-			`${discordUser.username}'s ${user.character.name}`,
-			`HP: ${user.character.hp}/${user.character.start_hp}\n${progressBar(
+			`Main Character: *${discordUser.username}'s ${user.character.name}*`,
+			`**HP**: ${user.character.hp}/${user.character.start_hp}\n${progressBar(
 				user.character.hp,
 				user.character.start_hp
 			)}`,
@@ -154,10 +155,15 @@ export const userProfileEmbed = async (
 		);
 	}
 
+	let winRateRound: number
+	winRateRound = user.wins / user.battles
+	//if (winRateRound = (undefined || NaN)) winRateRound = 0.00
+	
 	embed.setDescription(
-		`${CURRENCY.EMOJI}: ${user.currency}\nPREMIUM: ${
-			user.premium ? 'true' : 'false'
-		}\nBattles: ${user.battles}\nWins: ${user.wins}\n\n${join(
+		`${CURRENCY.EMOJI} **Coins**: ${user.currency}\n**Premium Subscription**: ${
+			user.premium ? 'Yes' : 'None...'
+		}\n**Battles**: ${user.battles} / **Wins**: ${user.wins}\n**Win Rate**: ${(winRateRound?.toFixed(2) + '%').replace('NaN%', 'Not battled yet').replace('0.', '')}\n
+		**Characters**: ${join(
 			map(user.characters, 'emoji'),
 			' '
 		)}`
