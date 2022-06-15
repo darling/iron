@@ -7,7 +7,7 @@ client.on('ready', (client) => {
 
 	console.log(`Logged in as ${client.user.tag}!`);
 
-	user.setActivity('ferris.gg', {
+	user.setActivity('loom4k.me', {
 		type: 'PLAYING',
 	});
 
